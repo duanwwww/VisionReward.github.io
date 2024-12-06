@@ -1,160 +1,245 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
-    <meta
-      name="description"
-      content="Fine-Grained Multi-Dimensional Human Preference Learning
-for Image and Video Generation"
-    />
+    <meta name="description" content="Fine-Grained Multi-Dimensional Human Preference Learning
+for Image and Video Generation" />
     <meta name="keywords" content="TODO" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
-      VisionReward: Fine-Grained Multi-Dimensional Human Preference Learning
-      for Image and Video Generation
+        VisionReward: Fine-Grained Multi-Dimensional Human Preference Learning
+        for Image and Video Generation
     </title>
     <style>
-      /* 通用居中样式 */
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        text-align: center;
-      }
-      header {
-        margin: 20px 0;
-      }
-      h1 {
-        font-size: 2em;
-        margin: 10px 0;
-      }
-      h2 {
-        margin: 40px 0 10px;
-      }
-      a {
-        text-decoration: none;
-        color: blue;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      /* 导航栏样式 */
-      .navbar {
-        display: flex;
-        justify-content: center;
-        background-color: #333;
-        padding: 10px 0;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
-      .navbar a {
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-      }
-      .navbar a:hover {
-        background-color: #575757;
-        border-radius: 5px;
-      }
-      /* 页面内容分区样式 */
-      section {
-        padding: 20px;
-        margin: 20px 0;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-      }
+        /* 通用居中样式 */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        header {
+            margin: 20px 0;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+
+        h2 {
+            margin: 40px 0 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* 页面内容分区样式 */
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <h1>VisionReward</h1>
-      <p>
-        Fine-Grained Multi-Dimensional Human Preference Learning for Image and
-        Video Generation
-      </p>
+        <h1>VisionReward</h1>
+        <p>
+            Fine-Grained Multi-Dimensional Human Preference Learning for Image and
+            Video Generation
+        </p>
     </header>
     <div>
-      <span>Vision Reward Team</span>
+        <span>Vision Reward Team</span>
     </div>
     <div>
-      <div>
-        <span>
-          <a href="TODO">
+        <div>
             <span>
-              <i></i>
+                <a href="TODO">
+                    <span>
+                        <i></i>
+                    </span>
+                    <span>arXiv</span>
+                </a>
             </span>
-            <span>arXiv</span>
-          </a>
-        </span>
-        <span>
-          <a href="https://github.com/xujz18/VisionReward">
             <span>
-              <i></i>
+                <a href="https://github.com/xujz18/VisionReward">
+                    <span>
+                        <i></i>
+                    </span>
+                    <span>Code</span>
+                </a>
             </span>
-            <span>Code</span>
-          </a>
-        </span>
-      </div>
-      <embed src="https://duanwwww.github.io/VisionReward.github.io/images/OverView.pdf" type="application/pdf" width="80%" height="600px"/>
+        </div>
     </div>
-    
+    <img src="/images/OverView.jpg" alt="An overview of the VisionReward and MPO." style="max-width: 100%; height: auto;" />
+
     <!-- 横向导航栏 -->
     <nav class="navbar">
-      <a href="#abstract">Abstract</a>
-      <a href="#dataset">Dataset</a>
-      <a href="#leaderboard">Leaderboard</a>
-      <a href="#experiment">Experiment</a>
-      <a href="#examples">Examples</a>
-      <a href="#citation">Citation</a>
+        <a href="#abstract">Abstract</a>
+        <a href="#annotation">Annotation</a>
+        <a href="#benchmark">Benchmark</a>
+        <a href="#experiment">Experiment</a>
+        <a href="#examples">Examples</a>
+        <a href="#citation">Citation</a>
     </nav>
-    
+
     <!-- 页面内容 -->
     <section id="abstract">
-      <h2>Abstract</h2>
-      <p>
-        We present VisionReward, a general strategy to aligning visual generation
-        models---both image and video generation---with human preferences through a
-        fine-grained and multi-dimensional framework. We decompose human
-        preferences in images and videos into multiple dimensions, each
-        represented by a series of judgment questions, linearly weighted and
-        summed to an interpretable and accurate score. To address the challenges
-        of video quality assessment, we systematically analyze various dynamic
-        features of videos, which helps VisionReward surpass VideoScore by 17.2%
-        and achieve top performance for video preference prediction. Based on
-        VisionReward, we develop a multi-objective preference learning algorithm
-        that effectively addresses the issue of confounding factors within
-        preference data. Our approach significantly outperforms existing image
-        and video scoring methods on both machine metrics and human evaluation.
-        The models and preference data will be open-sourced.
-      </p>
+        <h2>Abstract</h2>
+        <p>
+            We present VisionReward, a general strategy to aligning visual generation
+            models---both image and video generation---with human preferences through a
+            fine-grained and multi-dimensional framework. We decompose human
+            preferences in images and videos into multiple dimensions, each
+            represented by a series of judgment questions, linearly weighted and
+            summed to an interpretable and accurate score. To address the challenges
+            of video quality assessment, we systematically analyze various dynamic
+            features of videos, which helps VisionReward surpass VideoScore by 17.2%
+            and achieve top performance for video preference prediction. Based on
+            VisionReward, we develop a multi-objective preference learning algorithm
+            that effectively addresses the issue of confounding factors within
+            preference data. Our approach significantly outperforms existing image
+            and video scoring methods on both machine metrics and human evaluation.
+            The models and preference data will be open-sourced.
+        </p>
     </section>
-    
-    <section id="dataset">
-      <h2>Dataset</h2>
-      <p>Details about the dataset will be added here.</p>
+
+    <section id="annotation">
+        <h2>Annotation</h2>
+        <p>We design a unified annotation system for both image and video generation, decomposing the factors
+            influencing human preferences. To address the challenges of video evaluation, we incorporate extensive
+            observations of dynamic content in videos into our judgment tasks, such as motion stability or movement
+            quality. The annotation contains 3 million questions for 48k images and 2 million questions for 33k videos.
+        </p>
+        <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; margin: 20px auto; border-collapse: collapse;">
+            <thead>
+              <tr>
+                <th><strong>Type</strong></th>
+                <th><strong>Source</strong></th>
+                <th><strong>#Samples</strong></th>
+                <th><strong>#Checklist</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="3"><strong>Image</strong></td>
+                <td>ImageRewardDB</td>
+                <td>16K</td>
+                <td>1M</td>
+              </tr>
+              <tr>
+                <td>Pick-a-Pic</td>
+                <td>16K</td>
+                <td>1M</td>
+              </tr>
+              <tr>
+                <td>HPDv2</td>
+                <td>16K</td>
+                <td>1M</td>
+              </tr>
+              <tr>
+                <td rowspan="4"><strong>Video</strong></td>
+                <td>CogVideoX</td>
+                <td>10K</td>
+                <td>0.6M</td>
+              </tr>
+              <tr>
+                <td>Open-Sora</td>
+                <td>10K</td>
+                <td>0.6M</td>
+              </tr>
+              <tr>
+                <td>VideoCrafter2</td>
+                <td>10K</td>
+                <td>0.6M</td>
+              </tr>
+              <tr>
+                <td>Panda-70M</td>
+                <td>3K</td>
+                <td>0.2M</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><em>Statistics of source data and annotation.</em></p>
     </section>
-    
-    <section id="leaderboard">
-      <h2>Leaderboard</h2>
-      <p>Details about the leaderboard will be added here.</p>
+
+    <section id="benchmark">
+        <h2>MonetBench: Multi-Dimensional Benchmark</h2>
+        <p>To establish a comprehensive evaluation benchmark for both image and video generation, we construct Monet-Bench, which contains two specialized test sets: Image-MonetBench and Video-MonetBench. The following table shows content and challenge categories for image and video domains. </p>
+        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; margin: 20px auto; border-collapse: collapse; font-size: 0.8em;">
+            <thead>
+              <tr>
+                <th><strong>Type</strong></th>
+                <th><strong>Image</strong></th>
+                <th><strong>Video</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td ><strong>Content</strong></td>
+                <td>People, Objects, Animals,Architecture, Landscape,Vehicles, Plants, Food,Others, Scenes</td>
+                <td>Story, Human Activity,Artificial Scene, Others,Natural Animal ActivityPhysical Phenomena</td>
+              </tr>
+              <tr>
+                <td><strong>Challenge</strong></td>
+                <td>Unreal, Style, History,Fine-grained Detail,Color, Famous Character,Normal, Famous Places,Writing, Complex Combo,Positional, Counting,</td>
+                <td>Material, Angle and Lens,Emotional Expression,Color/Tone, Surreal,World Knowledge,Special Effects, Text,Spatial Relationship,Camera Movement,Logical Consistency,Style, Temporal Speed</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><em>Content and Challenge Categories for Image and Video</em></p>
     </section>
-    
+
     <section id="experiment">
-      <h2>Experiment</h2>
-      <p>Details about the experiments will be added here.</p>
+        <h2>Experiment</h2>
+        <p>Details about the experiments will be added here.</p>
     </section>
-    
+
     <section id="examples">
-      <h2>Examples</h2>
-      <p>Details about the examples will be added here.</p>
+        <h2>Examples</h2>
+        <p>Details about the examples will be added here.</p>
     </section>
-    
+
     <section id="citation">
-      <h2>Citation</h2>
-      <p>Details about the citation will be added here.</p>
+        <h2>Citation</h2>
+        <p>Details about the citation will be added here.</p>
     </section>
-  </body>
+</body>
+
 </html>
