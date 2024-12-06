@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Fine-Grained Multi-Dimensional Human Preference Learning
+for Image and Video Generation"
+    />
+    <meta name="keywords" content="TODO" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      VisionReward: Fine-Grained Multi-Dimensional Human Preference Learning
+      for Image and Video Generation
+    </title>
+    <style>
+      /* 通用居中样式 */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      header {
+        margin: 20px 0;
+      }
+      h1 {
+        font-size: 2em;
+        margin: 10px 0;
+      }
+      h2 {
+        margin: 40px 0 10px;
+      }
+      a {
+        text-decoration: none;
+        color: blue;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      /* 导航栏样式 */
+      .navbar {
+        display: flex;
+        justify-content: center;
+        background-color: #333;
+        padding: 10px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .navbar a {
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+      .navbar a:hover {
+        background-color: #575757;
+        border-radius: 5px;
+      }
+      /* 页面内容分区样式 */
+      section {
+        padding: 20px;
+        margin: 20px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>VisionReward</h1>
+      <p>
+        Fine-Grained Multi-Dimensional Human Preference Learning for Image and
+        Video Generation
+      </p>
+    </header>
+    <div>
+      <span>Vision Reward Team</span>
+    </div>
+    <div>
+      <div>
+        <span>
+          <a href="TODO">
+            <span>
+              <i></i>
+            </span>
+            <span>arXiv</span>
+          </a>
+        </span>
+        <span>
+          <a href="https://github.com/xujz18/VisionReward">
+            <span>
+              <i></i>
+            </span>
+            <span>Code</span>
+          </a>
+        </span>
+      </div>
+      <embed src="/images/OverView.pdf" type="application/pdf"/>
+    </div>
+    
+    <!-- 横向导航栏 -->
+    <nav class="navbar">
+      <a href="#abstract">Abstract</a>
+      <a href="#dataset">Dataset</a>
+      <a href="#leaderboard">Leaderboard</a>
+      <a href="#experiment">Experiment</a>
+      <a href="#examples">Examples</a>
+      <a href="#citation">Citation</a>
+    </nav>
+    
+    <!-- 页面内容 -->
+    <section id="abstract">
+      <h2>Abstract</h2>
+      <p>
+        We present VisionReward, a general strategy to aligning visual generation
+        models---both image and video generation---with human preferences through a
+        fine-grained and multi-dimensional framework. We decompose human
+        preferences in images and videos into multiple dimensions, each
+        represented by a series of judgment questions, linearly weighted and
+        summed to an interpretable and accurate score. To address the challenges
+        of video quality assessment, we systematically analyze various dynamic
+        features of videos, which helps VisionReward surpass VideoScore by 17.2%
+        and achieve top performance for video preference prediction. Based on
+        VisionReward, we develop a multi-objective preference learning algorithm
+        that effectively addresses the issue of confounding factors within
+        preference data. Our approach significantly outperforms existing image
+        and video scoring methods on both machine metrics and human evaluation.
+        The models and preference data will be open-sourced.
+      </p>
+    </section>
+    
+    <section id="dataset">
+      <h2>Dataset</h2>
+      <p>Details about the dataset will be added here.</p>
+    </section>
+    
+    <section id="leaderboard">
+      <h2>Leaderboard</h2>
+      <p>Details about the leaderboard will be added here.</p>
+    </section>
+    
+    <section id="experiment">
+      <h2>Experiment</h2>
+      <p>Details about the experiments will be added here.</p>
+    </section>
+    
+    <section id="examples">
+      <h2>Examples</h2>
+      <p>Details about the examples will be added here.</p>
+    </section>
+    
+    <section id="citation">
+      <h2>Citation</h2>
+      <p>Details about the citation will be added here.</p>
+    </section>
+  </body>
+</html>
