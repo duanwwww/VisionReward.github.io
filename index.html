@@ -109,17 +109,21 @@ for Image and Video Generation" />
     </div>
     <div style="display: flex; justify-content: center;">
         <figure style="max-width: 60%; height: auto;">
-            <img src="https://duanwwww.github.io/VisionReward.github.io/images/TopDemo.jpg" alt="Samples of VisionReward and Multi-Objective Preference Optimization (MPO) algorithm."style="max-width: 100%; height: auto;" />
-            <figcaption>Samples of VisionReward and Multi-Objective Preference Optimization (MPO) algorithm.</figcaption>
+            <img src="https://duanwwww.github.io/VisionReward.github.io/images/TopDemo.jpg"
+                alt="Samples of VisionReward and Multi-Objective Preference Optimization (MPO) algorithm."
+                style="max-width: 100%; height: auto;" />
+            <figcaption>Samples of VisionReward and Multi-Objective Preference Optimization (MPO) algorithm.
+            </figcaption>
         </figure>
     </div>
     <div style="display: flex; justify-content: center;">
         <figure style="max-width: 60%; height: auto;">
-            <img src="https://duanwwww.github.io/VisionReward.github.io/images/OverView.jpg" alt="An overview of the VisionReward and MPO." style="max-width: 100%; height: auto;" />
+            <img src="https://duanwwww.github.io/VisionReward.github.io/images/OverView.jpg"
+                alt="An overview of the VisionReward and MPO." style="max-width: 100%; height: auto;" />
             <figcaption>An overview of the VisionReward and MPO.</figcaption>
         </figure>
     </div>
-    
+
 
     <!-- 横向导航栏 -->
     <nav class="navbar">
@@ -127,7 +131,7 @@ for Image and Video Generation" />
         <a href="#annotation">Annotation</a>
         <a href="#benchmark">Benchmark</a>
         <a href="#experiments">Experiments</a>
-        <a href="#examples">Examples</a>
+        <a href="#case_study">MPO Case Study</a>
         <a href="#citation">Citation</a>
     </nav>
 
@@ -162,384 +166,469 @@ for Image and Video Generation" />
         <div style="display: flex; justify-content: space-between;">
             <div style="display: flex; justify-content: center;width: 48%;height: auto;">
                 <figure>
-                    <img src="https://duanwwww.github.io/VisionReward.github.io/images/attributes_annotation_distribution_image.jpg" alt="Text-to-image" style="width: 100%; height: auto;">
+                    <img src="https://duanwwww.github.io/VisionReward.github.io/images/attributes_annotation_distribution_image.jpg"
+                        alt="Text-to-image" style="width: 100%; height: auto;">
                     <figcaption>Text-to-image</figcaption>
                 </figure>
             </div>
             <div style="display: flex; justify-content: center;width: 48%;height: auto;">
                 <figure>
-                    <img src="https://duanwwww.github.io/VisionReward.github.io/images/attributes_annotation_distribution_video.jpg" alt="Text-to-video" style="width: 100%; height: auto;">
+                    <img src="https://duanwwww.github.io/VisionReward.github.io/images/attributes_annotation_distribution_video.jpg"
+                        alt="Text-to-video" style="width: 100%; height: auto;">
                     <figcaption>Text-to-video</figcaption>
                 </figure>
             </div>
-            
-          </div>
-        <p>Annotation statistics of different sub-dimensions.</p>
-        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; margin: 20px auto; border-collapse: collapse; font-size: 0.8em;">
-            <thead>
-              <tr>
-                <th rowspan="2" style="text-align: left;"><strong>Dimension</strong></th>
-                <th colspan="2"><strong>#Sub-dimension</strong></th>
-                <th colspan="2"><strong>#Checklist</strong></th>
-              </tr>
-              <tr>
-                <th><strong>Image</strong></th>
-                <th><strong>Video</strong></th>
-                <th><strong>Image</strong></th>
-                <th><strong>Video</strong></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Alignment</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>Composition</td>
-                <td>5</td>
-                <td>1</td>
-                <td>13</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>Quality</td>
-                <td>5</td>
-                <td>4</td>
-                <td>14</td>
-                <td>14</td>
-              </tr>
-              <tr>
-                <td>Fidelity</td>
-                <td>5</td>
-                <td>3</td>
-                <td>25</td>
-                <td>9</td>
-              </tr>
-              <tr>
-                <td>Safety & Emotion</td>
-                <td>2</td>
-                <td>1</td>
-                <td>8</td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>Stability</td>
-                <td>-</td>
-                <td>5</td>
-                <td>-</td>
-                <td>12</td>
-              </tr>
-              <tr>
-                <td>Dynamic</td>
-                <td>-</td>
-                <td>2</td>
-                <td>-</td>
-                <td>8</td>
-              </tr>
-              <tr>
-                <td>Physics</td>
-                <td>-</td>
-                <td>1</td>
-                <td>-</td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>Preservation</td>
-                <td>-</td>
-                <td>2</td>
-                <td>-</td>
-                <td>7</td>
-              </tr>
-              <tr>
-                <td><strong>Total</strong></td>
-                <td><strong>18</strong></td>
-                <td><strong>20</strong></td>
-                <td><strong>61</strong></td>
-                <td><strong>64</strong></td>
-              </tr>
-            </tbody>
-          </table>
-          <p><em>Taxonomy of annotation for VisionReward (Ours).</em></p>
-        <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; margin: 20px auto; border-collapse: collapse;">
-            <thead>
-              <tr>
-                <th><strong>Type</strong></th>
-                <th><strong>Source</strong></th>
-                <th><strong>#Samples</strong></th>
-                <th><strong>#Checklist</strong></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td rowspan="3"><strong>Image</strong></td>
-                <td>ImageRewardDB</td>
-                <td>16K</td>
-                <td>1M</td>
-              </tr>
-              <tr>
-                <td>Pick-a-Pic</td>
-                <td>16K</td>
-                <td>1M</td>
-              </tr>
-              <tr>
-                <td>HPDv2</td>
-                <td>16K</td>
-                <td>1M</td>
-              </tr>
-              <tr>
-                <td rowspan="4"><strong>Video</strong></td>
-                <td>CogVideoX</td>
-                <td>10K</td>
-                <td>0.6M</td>
-              </tr>
-              <tr>
-                <td>Open-Sora</td>
-                <td>10K</td>
-                <td>0.6M</td>
-              </tr>
-              <tr>
-                <td>VideoCrafter2</td>
-                <td>10K</td>
-                <td>0.6M</td>
-              </tr>
-              <tr>
-                <td>Panda-70M</td>
-                <td>3K</td>
-                <td>0.2M</td>
-              </tr>
-            </tbody>
-          </table>
-          <p><em>Statistics of source data and annotation.</em></p>
 
-          
+        </div>
+        <p>Annotation statistics of different sub-dimensions.</p>
+        <table border="1" cellpadding="5" cellspacing="0"
+            style="width: 100%; margin: 20px auto; border-collapse: collapse; font-size: 0.8em;">
+            <thead>
+                <tr>
+                    <th rowspan="2" style="text-align: left;"><strong>Dimension</strong></th>
+                    <th colspan="2"><strong>#Sub-dimension</strong></th>
+                    <th colspan="2"><strong>#Checklist</strong></th>
+                </tr>
+                <tr>
+                    <th><strong>Image</strong></th>
+                    <th><strong>Video</strong></th>
+                    <th><strong>Image</strong></th>
+                    <th><strong>Video</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alignment</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Composition</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>13</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Quality</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>14</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>Fidelity</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>25</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>Safety & Emotion</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Stability</td>
+                    <td>-</td>
+                    <td>5</td>
+                    <td>-</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Dynamic</td>
+                    <td>-</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Physics</td>
+                    <td>-</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Preservation</td>
+                    <td>-</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>18</strong></td>
+                    <td><strong>20</strong></td>
+                    <td><strong>61</strong></td>
+                    <td><strong>64</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        <p><em>Taxonomy of annotation for VisionReward (Ours).</em></p>
+        <table border="1" cellpadding="10" cellspacing="0"
+            style="width: 100%; margin: 20px auto; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th><strong>Type</strong></th>
+                    <th><strong>Source</strong></th>
+                    <th><strong>#Samples</strong></th>
+                    <th><strong>#Checklist</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3"><strong>Image</strong></td>
+                    <td>ImageRewardDB</td>
+                    <td>16K</td>
+                    <td>1M</td>
+                </tr>
+                <tr>
+                    <td>Pick-a-Pic</td>
+                    <td>16K</td>
+                    <td>1M</td>
+                </tr>
+                <tr>
+                    <td>HPDv2</td>
+                    <td>16K</td>
+                    <td>1M</td>
+                </tr>
+                <tr>
+                    <td rowspan="4"><strong>Video</strong></td>
+                    <td>CogVideoX</td>
+                    <td>10K</td>
+                    <td>0.6M</td>
+                </tr>
+                <tr>
+                    <td>Open-Sora</td>
+                    <td>10K</td>
+                    <td>0.6M</td>
+                </tr>
+                <tr>
+                    <td>VideoCrafter2</td>
+                    <td>10K</td>
+                    <td>0.6M</td>
+                </tr>
+                <tr>
+                    <td>Panda-70M</td>
+                    <td>3K</td>
+                    <td>0.2M</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><em>Statistics of source data and annotation.</em></p>
+
+
     </section>
 
     <section id="benchmark">
         <h2>MonetBench: Multi-Dimensional Benchmark</h2>
-        <p>To establish a comprehensive evaluation benchmark for both image and video generation, we construct Monet-Bench, which contains two specialized test sets: Image-MonetBench and Video-MonetBench. The following table shows content and challenge categories for image and video domains. </p>
-        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; margin: 20px auto; border-collapse: collapse; font-size: 0.8em;">
+        <p>To establish a comprehensive evaluation benchmark for both image and video generation, we construct
+            Monet-Bench, which contains two specialized test sets: Image-MonetBench and Video-MonetBench. The following
+            table shows content and challenge categories for image and video domains. </p>
+        <table border="1" cellpadding="5" cellspacing="0"
+            style="width: 100%; margin: 20px auto; border-collapse: collapse; font-size: 0.8em;">
             <thead>
-              <tr>
-                <th><strong>Type</strong></th>
-                <th><strong>Image</strong></th>
-                <th><strong>Video</strong></th>
-              </tr>
+                <tr>
+                    <th><strong>Type</strong></th>
+                    <th><strong>Image</strong></th>
+                    <th><strong>Video</strong></th>
+                </tr>
             </thead>
             <tbody>
-              <tr>
-                <td ><strong>Content</strong></td>
-                <td>People, Objects, Animals,Architecture, Landscape,Vehicles, Plants, Food,Others, Scenes</td>
-                <td>Story, Human Activity,Artificial Scene, Others,Natural Animal ActivityPhysical Phenomena</td>
-              </tr>
-              <tr>
-                <td><strong>Challenge</strong></td>
-                <td>Unreal, Style, History,Fine-grained Detail,Color, Famous Character,Normal, Famous Places,Writing, Complex Combo,Positional, Counting,</td>
-                <td>Material, Angle and Lens,Emotional Expression,Color/Tone, Surreal,World Knowledge,Special Effects, Text,Spatial Relationship,Camera Movement,Logical Consistency,Style, Temporal Speed</td>
-              </tr>
+                <tr>
+                    <td><strong>Content</strong></td>
+                    <td>People, Objects, Animals,Architecture, Landscape,Vehicles, Plants, Food,Others, Scenes</td>
+                    <td>Story, Human Activity,Artificial Scene, Others,Natural Animal ActivityPhysical Phenomena</td>
+                </tr>
+                <tr>
+                    <td><strong>Challenge</strong></td>
+                    <td>Unreal, Style, History,Fine-grained Detail,Color, Famous Character,Normal, Famous
+                        Places,Writing, Complex Combo,Positional, Counting,</td>
+                    <td>Material, Angle and Lens,Emotional Expression,Color/Tone, Surreal,World Knowledge,Special
+                        Effects, Text,Spatial Relationship,Camera Movement,Logical Consistency,Style, Temporal Speed
+                    </td>
+                </tr>
             </tbody>
-          </table>
-          <p><em>Content and Challenge Categories for Image and Video</em></p>
+        </table>
+        <p><em>Content and Challenge Categories for Image and Video</em></p>
     </section>
 
     <section id="experiments">
         <h2>Experiments</h2>
-        <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; margin: 20px auto; border-collapse: collapse; font-size: 0.8em;">
+        <table border="1" cellpadding="10" cellspacing="0"
+            style="width: 100%; margin: 20px auto; border-collapse: collapse; font-size: 0.8em;">
             <thead>
-              <tr>
-                <th rowspan="3"><strong>Method</strong></th>
-                <th colspan="3"><strong>Image</strong></th>
-                <th colspan="4"><strong>Video</strong></th>
-              </tr>
-              <tr>
-                <th rowspan="2"><strong>HPDv2</strong></th>
-                <th colspan="2"><strong>MonetBench</strong></th>
-                <th colspan="2"><strong>GenAI-Bench</strong></th>
-                <th colspan="2"><strong>MonetBench</strong></th>
-              </tr>
-              <tr>
-                <th><strong>tau*</strong></th>
-                <th><strong>diff**</strong></th>
-                <th><strong>tau</strong></th>
-                <th><strong>diff</strong></th>
-                <th><strong>tau</strong></th>
-                <th><strong>diff</strong></th>
-              </tr>
+                <tr>
+                    <th rowspan="3"><strong>Method</strong></th>
+                    <th colspan="3"><strong>Image</strong></th>
+                    <th colspan="4"><strong>Video</strong></th>
+                </tr>
+                <tr>
+                    <th rowspan="2"><strong>HPDv2</strong></th>
+                    <th colspan="2"><strong>MonetBench</strong></th>
+                    <th colspan="2"><strong>GenAI-Bench</strong></th>
+                    <th colspan="2"><strong>MonetBench</strong></th>
+                </tr>
+                <tr>
+                    <th><strong>tau*</strong></th>
+                    <th><strong>diff**</strong></th>
+                    <th><strong>tau</strong></th>
+                    <th><strong>diff</strong></th>
+                    <th><strong>tau</strong></th>
+                    <th><strong>diff</strong></th>
+                </tr>
             </thead>
             <tbody>
-              <tr>
-                <td colspan="8" style="font-style: italic; color: #6a1b9a; text-align: left;"><strong>task-specific discriminative models</strong></td>
-              </tr>
-              <tr>
-                <td>ImageReward</td>
-                <td>74.0</td>
-                <td>48.8</td>
-                <td>56.5</td>
-                <td>48.4</td>
-                <td>72.1</td>
-                <td>55.8</td>
-                <td>58.4</td>
-              </tr>
-              <tr>
-                <td>PickScore</td>
-                <td>79.8</td>
-                <td>49.8</td>
-                <td>57.6</td>
-                <td><u>52.4</u></td>
-                <td><u>75.4</u></td>
-                <td>57.7</td>
-                <td>61.6</td>
-              </tr>
-              <tr>
-                <td>HPSv2</td>
-                <td><u>83.3</u></td>
-                <td>48.4</td>
-                <td>55.6</td>
-                <td>49.3</td>
-                <td>73.0</td>
-                <td>59.3</td>
-                <td>62.5</td>
-              </tr>
-              <tr>
-                <td colspan="8" style="font-style: italic; color: #6a1b9a;text-align: left;"><strong>generative models</strong></td>
-              </tr>
-              <tr>
-                <td>GPT-4o</td>
-                <td>77.5</td>
-                <td>38.9</td>
-                <td>52.7</td>
-                <td>41.8</td>
-                <td>54.3</td>
-                <td>45.7</td>
-                <td>48.3</td>
-              </tr>
-              <tr>
-                <td>Gemini</td>
-                <td>60.7</td>
-                <td>27.4</td>
-                <td>55.1</td>
-                <td>46.9</td>
-                <td>61.7</td>
-                <td>52.2</td>
-                <td>56.8</td>
-              </tr>
-              <tr>
-                <td>VQAScore</td>
-                <td>69.7</td>
-                <td>49.4</td>
-                <td>56.5</td>
-                <td>45.2</td>
-                <td>68.0</td>
-                <td>56.1</td>
-                <td>59.5</td>
-              </tr>
-              <tr>
-                <td>VideoScore</td>
-                <td>76.8</td>
-                <td>45.8</td>
-                <td>52.5</td>
-                <td>47.8</td>
-                <td>71.4</td>
-                <td>49.1</td>
-                <td>54.9</td>
-              </tr>
-              <tr>
-                <td><strong>VisionReward (Ours)</strong></td>
-                <td><strong>81.7</strong></td>
-                <td><u><strong>51.8</strong></u></td>
-                <td><u><strong>59.5</strong></u></td>
-                <td><strong>51.8</strong></td>
-                <td><strong>74.4</strong></td>
-                <td><u><strong>64.0</strong></u></td>
-                <td><u><strong>72.1</strong></u></td>
-              </tr>
+                <tr>
+                    <td colspan="8" style="font-style: italic; color: #6a1b9a; text-align: left;"><strong>task-specific
+                            discriminative models</strong></td>
+                </tr>
+                <tr>
+                    <td>ImageReward</td>
+                    <td>74.0</td>
+                    <td>48.8</td>
+                    <td>56.5</td>
+                    <td>48.4</td>
+                    <td>72.1</td>
+                    <td>55.8</td>
+                    <td>58.4</td>
+                </tr>
+                <tr>
+                    <td>PickScore</td>
+                    <td>79.8</td>
+                    <td>49.8</td>
+                    <td>57.6</td>
+                    <td><u>52.4</u></td>
+                    <td><u>75.4</u></td>
+                    <td>57.7</td>
+                    <td>61.6</td>
+                </tr>
+                <tr>
+                    <td>HPSv2</td>
+                    <td><u>83.3</u></td>
+                    <td>48.4</td>
+                    <td>55.6</td>
+                    <td>49.3</td>
+                    <td>73.0</td>
+                    <td>59.3</td>
+                    <td>62.5</td>
+                </tr>
+                <tr>
+                    <td colspan="8" style="font-style: italic; color: #6a1b9a;text-align: left;"><strong>generative
+                            models</strong></td>
+                </tr>
+                <tr>
+                    <td>GPT-4o</td>
+                    <td>77.5</td>
+                    <td>38.9</td>
+                    <td>52.7</td>
+                    <td>41.8</td>
+                    <td>54.3</td>
+                    <td>45.7</td>
+                    <td>48.3</td>
+                </tr>
+                <tr>
+                    <td>Gemini</td>
+                    <td>60.7</td>
+                    <td>27.4</td>
+                    <td>55.1</td>
+                    <td>46.9</td>
+                    <td>61.7</td>
+                    <td>52.2</td>
+                    <td>56.8</td>
+                </tr>
+                <tr>
+                    <td>VQAScore</td>
+                    <td>69.7</td>
+                    <td>49.4</td>
+                    <td>56.5</td>
+                    <td>45.2</td>
+                    <td>68.0</td>
+                    <td>56.1</td>
+                    <td>59.5</td>
+                </tr>
+                <tr>
+                    <td>VideoScore</td>
+                    <td>76.8</td>
+                    <td>45.8</td>
+                    <td>52.5</td>
+                    <td>47.8</td>
+                    <td>71.4</td>
+                    <td>49.1</td>
+                    <td>54.9</td>
+                </tr>
+                <tr>
+                    <td><strong>VisionReward (Ours)</strong></td>
+                    <td><strong>81.7</strong></td>
+                    <td><u><strong>51.8</strong></u></td>
+                    <td><u><strong>59.5</strong></u></td>
+                    <td><strong>51.8</strong></td>
+                    <td><strong>74.4</strong></td>
+                    <td><u><strong>64.0</strong></u></td>
+                    <td><u><strong>72.1</strong></u></td>
+                </tr>
             </tbody>
-          </table>
-          <p><em>Preference accuracy on multiple dataset. <strong>Bold</strong> denotes the best score within the generative models, while <u>underline</u> signifies the best score among all categories. Tau* means taking account of ties, and diff** means dropping ties in labels (we drop ties both in labels and responses for GPT-4o and Gemini in diff** because too many ties are given by them).</em></p>
-          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; margin: 20px auto; border-collapse: collapse; font-size: 0.8em;">
+        </table>
+        <p><em>Preference accuracy on multiple dataset. <strong>Bold</strong> denotes the best score within the
+                generative models, while <u>underline</u> signifies the best score among all categories. Tau* means
+                taking account of ties, and diff** means dropping ties in labels (we drop ties both in labels and
+                responses for GPT-4o and Gemini in diff** because too many ties are given by them).</em></p>
+        <table border="1" cellpadding="5" cellspacing="0"
+            style="width: 100%; margin: 20px auto; border-collapse: collapse; font-size: 0.8em;">
             <thead>
-              <tr>
-                <th rowspan="2"><strong>Method</strong></th>
-                <th colspan="4"><strong>Image</strong></th>
-                <th colspan="4"><strong>Video</strong></th>
-              </tr>
-              <tr>
-                <th><strong>Composition</strong></th>
-                <th><strong>Quality</strong></th>
-                <th><strong>Fidelity</strong></th>
-                <th><strong>Safety & Emotion</strong></th>
-                <th><strong>Stability</strong></th>
-                <th><strong>Dynamic</strong></th>
-                <th><strong>Physics</strong></th>
-                <th><strong>Preservation</strong></th>
-              </tr>
+                <tr>
+                    <th rowspan="2"><strong>Method</strong></th>
+                    <th colspan="4"><strong>Image</strong></th>
+                    <th colspan="4"><strong>Video</strong></th>
+                </tr>
+                <tr>
+                    <th><strong>Composition</strong></th>
+                    <th><strong>Quality</strong></th>
+                    <th><strong>Fidelity</strong></th>
+                    <th><strong>Safety & Emotion</strong></th>
+                    <th><strong>Stability</strong></th>
+                    <th><strong>Dynamic</strong></th>
+                    <th><strong>Physics</strong></th>
+                    <th><strong>Preservation</strong></th>
+                </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>LLaVa<sup>*</sup></td>
-                <td>59.9</td>
-                <td>65.7</td>
-                <td><strong>80.9</strong></td>
-                <td>64.4</td>
-                <td>52.5</td>
-                <td>53.8</td>
-                <td>50.6</td>
-                <td>47.5</td>
-              </tr>
-              <tr>
-                <td>CogVLM2</td>
-                <td>65.8</td>
-                <td>67.1</td>
-                <td>53.1</td>
-                <td>74.7</td>
-                <td>49.3</td>
-                <td>57.1</td>
-                <td>51.2</td>
-                <td>47.8</td>
-              </tr>
-              <tr>
-                <td>GPT-4o</td>
-                <td>73.1</td>
-                <td>62.7</td>
-                <td>61.9</td>
-                <td>70.1</td>
-                <td>57.9</td>
-                <td>69.1</td>
-                <td><strong>62.4</strong></td>
-                <td>58.8</td>
-              </tr>
-              <tr>
-                <td>Gemini</td>
-                <td>69.4</td>
-                <td>59.9</td>
-                <td>59.7</td>
-                <td>74.9</td>
-                <td>58.1</td>
-                <td>71.1</td>
-                <td>58.1</td>
-                <td>59.6</td>
-              </tr>
-              <tr>
-                <td><strong>VisionReward (Ours)</strong></td>
-                <td><strong>78.8</strong></td>
-                <td><strong>81.1</strong></td>
-                <td><strong>80.9</strong></td>
-                <td><strong>83.9</strong></td>
-                <td><strong>62.8</strong></td>
-                <td><strong>72.6</strong></td>
-                <td>53.1</td>
-                <td><strong>68.0</strong></td>
-              </tr>
+                <tr>
+                    <td>LLaVa<sup>*</sup></td>
+                    <td>59.9</td>
+                    <td>65.7</td>
+                    <td><strong>80.9</strong></td>
+                    <td>64.4</td>
+                    <td>52.5</td>
+                    <td>53.8</td>
+                    <td>50.6</td>
+                    <td>47.5</td>
+                </tr>
+                <tr>
+                    <td>CogVLM2</td>
+                    <td>65.8</td>
+                    <td>67.1</td>
+                    <td>53.1</td>
+                    <td>74.7</td>
+                    <td>49.3</td>
+                    <td>57.1</td>
+                    <td>51.2</td>
+                    <td>47.8</td>
+                </tr>
+                <tr>
+                    <td>GPT-4o</td>
+                    <td>73.1</td>
+                    <td>62.7</td>
+                    <td>61.9</td>
+                    <td>70.1</td>
+                    <td>57.9</td>
+                    <td>69.1</td>
+                    <td><strong>62.4</strong></td>
+                    <td>58.8</td>
+                </tr>
+                <tr>
+                    <td>Gemini</td>
+                    <td>69.4</td>
+                    <td>59.9</td>
+                    <td>59.7</td>
+                    <td>74.9</td>
+                    <td>58.1</td>
+                    <td>71.1</td>
+                    <td>58.1</td>
+                    <td>59.6</td>
+                </tr>
+                <tr>
+                    <td><strong>VisionReward (Ours)</strong></td>
+                    <td><strong>78.8</strong></td>
+                    <td><strong>81.1</strong></td>
+                    <td><strong>80.9</strong></td>
+                    <td><strong>83.9</strong></td>
+                    <td><strong>62.8</strong></td>
+                    <td><strong>72.6</strong></td>
+                    <td>53.1</td>
+                    <td><strong>68.0</strong></td>
+                </tr>
             </tbody>
-          </table>
-          <p><em>Accuracy of VisionReward (Ours) and other vision-language models (VLMs) on vision quality questions constructed from our annotation.* We test LLaVA-v1.5-7B for image and LLava-Next-Video-34B for video.</em></p>
+        </table>
+        <p><em>Accuracy of VisionReward (Ours) and other vision-language models (VLMs) on vision quality questions
+                constructed from our annotation.* We test LLaVA-v1.5-7B for image and LLava-Next-Video-34B for
+                video.</em></p>
+
+        <h3>MPO experiments and results</h3>
+        <div style="display: flex; justify-content: space-between;">
+            <div style="display: flex; justify-content: center;width: 48%;height: auto;">
+                <figure>
+                    <img src="https://duanwwww.github.io/VisionReward.github.io/images/exp_Overall_score.jpg"
+                        alt="Overall Score" style="width: 100%; height: auto;">
+                    <figcaption>Overall Score</figcaption>
+                </figure>
+            </div>
+            <div style="display: flex; justify-content: center;width: 48%;height: auto;">
+                <figure>
+                    <img src="https://duanwwww.github.io/VisionReward.github.io/images/exp_Composition_score.jpg"
+                        alt="Composition Score" style="width: 100%; height: auto;">
+                    <figcaption>Composition Score</figcaption>
+                </figure>
+            </div>
+            <div style="display: flex; justify-content: center;width: 48%;height: auto;">
+                <figure>
+                    <img src="https://duanwwww.github.io/VisionReward.github.io/images/exp_Fidelity_score.jpg"
+                        alt="Fidelity Score" style="width: 100%; height: auto;">
+                    <figcaption>Fidelity Score</figcaption>
+                </figure>
+            </div>
+            <div style="display: flex; justify-content: center;width: 48%;height: auto;">
+                <figure>
+                    <img src="https://duanwwww.github.io/VisionReward.github.io/images/exp_Alignment_score.jpg"
+                        alt="Alignment Score" style="width: 100%; height: auto;">
+                    <figcaption>Alignment Score</figcaption>
+                </figure>
+            </div>
+            <div style="display: flex; justify-content: center;width: 48%;height: auto;">
+                <figure>
+                    <img src="https://duanwwww.github.io/VisionReward.github.io/images/exp_Quality_score.jpg"
+                        alt="Quality Score" style="width: 100%; height: auto;">
+                    <figcaption>Quality Score</figcaption>
+                </figure>
+            </div>
+            <div style="display: flex; justify-content: center;width: 48%;height: auto;">
+                <figure>
+                    <img src="https://duanwwww.github.io/VisionReward.github.io/images/exp_Safety_and_Emotion_score.jpg"
+                        alt="Safety&Emotion Score" style="width: 100%; height: auto;">
+                    <figcaption>Safety&Emotion Score</figcaption>
+                </figure>
+            </div>
+        </div>
     </section>
 
-    <section id="examples">
-        <h2>Examples</h2>
-        <p>Details about the examples will be added here.</p>
+    <section id="case_study">
+        <h2>MPO Case Study</h2>
+        <div style="display: flex; justify-content: center;">
+            <figure style="max-width: 60%; height: auto;">
+                <img src="https://duanwwww.github.io/VisionReward.github.io/images/mpo_case_image.jpg"
+                    alt="Qualitative result of MPO in text-to-image." style="max-width: 100%; height: auto;" />
+                <figcaption>Qualitative result of MPO in text-to-image.</figcaption>
+            </figure>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <figure style="max-width: 60%; height: auto;">
+                <img src="https://duanwwww.github.io/VisionReward.github.io/images/dpo_case_1.jpg"
+                    alt="SQualitative result of MPO in text-to-video." style="max-width: 100%; height: auto;" />
+                <figcaption>Qualitative result of MPO in text-to-video.</figcaption>
+            </figure>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <figure style="max-width: 60%; height: auto;">
+                <img src="https://duanwwww.github.io/VisionReward.github.io/images/dpo_case_2.jpg"
+                    alt="Qualitative result of MPO in text-to-video." style="max-width: 100%; height: auto;" />
+                <figcaption>Qualitative result of MPO in text-to-video.</figcaption>
+            </figure>
+        </div>
     </section>
 
     <section id="citation">
