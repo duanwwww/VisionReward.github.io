@@ -107,7 +107,8 @@ for Image and Video Generation" />
             </span>
         </div>
     </div>
-    <img src="https://duanwwww.github.io/VisionReward.github.io/images/OverView.jpg" alt="An overview of the VisionReward and MPO." style="max-width: 80%; height: auto;" />
+    <img src="https://duanwwww.github.io/VisionReward.github.io/images/TopDemo.jpg" alt="Samples of VisionReward and Multi-Objective Preference Optimization (MPO) algorithm." style="max-width: 60%; height: auto;" />
+    <img src="https://duanwwww.github.io/VisionReward.github.io/images/OverView.jpg" alt="An overview of the VisionReward and MPO." style="max-width: 60%; height: auto;" />
 
     <!-- 横向导航栏 -->
     <nav class="navbar">
@@ -147,6 +148,99 @@ for Image and Video Generation" />
             observations of dynamic content in videos into our judgment tasks, such as motion stability or movement
             quality. The annotation contains 3 million questions for 48k images and 2 million questions for 33k videos.
         </p>
+        <div style="display: flex; justify-content: space-between;">
+            <img src="https://duanwwww.github.io/VisionReward.github.io/images/attributes_annotation_distribution_image.jpg" alt="Text-to-image" style="width: 48%; height: auto;">
+            <img src="https://duanwwww.github.io/VisionReward.github.io/images/attributes_annotation_distribution_video.jpg" alt="Text-to-video" style="width: 48%; height: auto;">
+          </div>
+        <p>Annotation statistics of different sub-dimensions.</p>
+        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; margin: 20px auto; border-collapse: collapse; font-size: 0.8em;">
+            <thead>
+              <tr>
+                <th rowspan="2" style="text-align: left;"><strong>Dimension</strong></th>
+                <th colspan="2"><strong>#Sub-dimension</strong></th>
+                <th colspan="2"><strong>#Checklist</strong></th>
+              </tr>
+              <tr>
+                <th><strong>Image</strong></th>
+                <th><strong>Video</strong></th>
+                <th><strong>Image</strong></th>
+                <th><strong>Video</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Alignment</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Composition</td>
+                <td>5</td>
+                <td>1</td>
+                <td>13</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Quality</td>
+                <td>5</td>
+                <td>4</td>
+                <td>14</td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <td>Fidelity</td>
+                <td>5</td>
+                <td>3</td>
+                <td>25</td>
+                <td>9</td>
+              </tr>
+              <tr>
+                <td>Safety & Emotion</td>
+                <td>2</td>
+                <td>1</td>
+                <td>8</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Stability</td>
+                <td>-</td>
+                <td>5</td>
+                <td>-</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>Dynamic</td>
+                <td>-</td>
+                <td>2</td>
+                <td>-</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>Physics</td>
+                <td>-</td>
+                <td>1</td>
+                <td>-</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Preservation</td>
+                <td>-</td>
+                <td>2</td>
+                <td>-</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td><strong>Total</strong></td>
+                <td><strong>18</strong></td>
+                <td><strong>20</strong></td>
+                <td><strong>61</strong></td>
+                <td><strong>64</strong></td>
+              </tr>
+            </tbody>
+          </table>
+          <p><em>Taxonomy of annotation for VisionReward (Ours).</em></p>
         <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; margin: 20px auto; border-collapse: collapse;">
             <thead>
               <tr>
@@ -197,6 +291,8 @@ for Image and Video Generation" />
             </tbody>
           </table>
           <p><em>Statistics of source data and annotation.</em></p>
+
+          
     </section>
 
     <section id="benchmark">
