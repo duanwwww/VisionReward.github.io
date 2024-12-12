@@ -41,9 +41,13 @@ for Image and Video Generation" />
             text-decoration: none;
             color: blue;
         }
-
+        
         a:hover {
             text-decoration: underline;
+        }
+
+        th {
+            display: none;
         }
 
         /* 导航栏样式 */
@@ -82,7 +86,7 @@ for Image and Video Generation" />
 </head>
 
 <body>
-    <header>
+    <header style="margin-top: 20px;">
         <h1>VisionReward</h1>
         <p style="font-size: 24px;font-family: 'Times New Roman', Times, serif;">
             Fine-Grained Multi-Dimensional Human Preference Learning for Image and
@@ -135,7 +139,7 @@ for Image and Video Generation" />
     <nav class="navbar">
         <a href="#abstract">Abstract</a>
         <a href="#annotation">Annotation</a>
-        <a href="#benchmark">Benchmark</a>
+        <!-- <a href="#benchmark">Benchmark</a> -->
         <a href="#experiments">Experiments</a>
         <a href="#case_study">MPO Case Study</a>
         <a href="#citation">Citation</a>
@@ -169,7 +173,7 @@ for Image and Video Generation" />
             observations of dynamic content in videos into our judgment tasks, such as motion stability or movement
             quality. The annotation contains 3 million questions for 48k images and 2 million questions for 33k videos.
         </p>
-        <div style="display: flex; justify-content: space-between;">
+        <!-- <div style="display: flex; justify-content: space-between;">
             <div style="display: flex; justify-content: center;width: 48%;height: auto;">
                 <figure>
                     <img src="https://duanwwww.github.io/VisionReward.github.io/images/attributes_annotation_distribution_image.jpg"
@@ -185,7 +189,7 @@ for Image and Video Generation" />
                 </figure>
             </div>
 
-        </div>
+        </div> -->
         <p>Annotation statistics of different sub-dimensions.</p>
         <table border="1" cellpadding="5" cellspacing="0"
             style="width: 80%; margin: 20px auto; border-collapse: collapse; font-size: 16px;">
@@ -331,7 +335,7 @@ for Image and Video Generation" />
 
     </section>
 
-    <section id="benchmark">
+    <!-- <section id="benchmark">
         <h2 style="font-size: 1.5em;">MonetBench: Multi-Dimensional Benchmark</h2>
         <p>To establish a comprehensive evaluation benchmark for both image and video generation, we construct
             Monet-Bench, which contains two specialized test sets: Image-MonetBench and Video-MonetBench. The following
@@ -390,7 +394,7 @@ for Image and Video Generation" />
                 </figure>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section id="experiments">
         <h2  style="font-size: 1.5em;">Experiments</h2>
@@ -593,8 +597,9 @@ for Image and Video Generation" />
                 constructed from our annotation.* We test LLaVA-v1.5-7B for image and LLava-Next-Video-34B for
                 video.</em></p>
 
-        <h3>MPO experiments and results</h3>
-        <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+        <h3 style="font-size: 1.2em;">MPO experiments and results</h3>
+        <p>TODO</p>
+        <!-- <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
             <div style="display: flex; justify-content: center;width: 48%;height: auto;">
                 <figure>
                     <img src="https://duanwwww.github.io/VisionReward.github.io/images/exp_Overall_score.jpg"
@@ -637,7 +642,7 @@ for Image and Video Generation" />
                     <figcaption>Safety&Emotion Score</figcaption>
                 </figure>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <section id="case_study">
@@ -667,7 +672,7 @@ for Image and Video Generation" />
 
     <section id="citation">
         <h2  style="font-size: 1.5em;">Citation</h2>
-        <p>Details about the citation will be added here.</p>
+        <p>VisionReward</p>
     </section>
 </body>
 
