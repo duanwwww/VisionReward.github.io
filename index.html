@@ -196,43 +196,184 @@ for Image and Video Generation" />
 
     <section id="intro">
         <h2 style="font-size: 1.5em;">Introduction</h2>
-        <section style="font-family: Arial, sans-serif;">
-            <h2 style="text-align: center; margin-bottom: 2rem;">主标题</h2>
-            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-                <!-- 卡片 1 -->
-                <details style="width: 300px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
-                    <summary style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ddd;">
-                        子标题 1
-                    </summary>
-                    <div style="padding: 1rem;">
-                        <p style="margin: 0 0 1rem;">这是子章节 1 的内容。这部分可以是详细的说明或者其他内容。</p>
-                        <a href="#" style="text-decoration: none; color: #007bff;">查看详情 →</a>
-                    </div>
-                </details>
-                
-                <!-- 卡片 2 -->
-                <details style="width: 300px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
-                    <summary style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ddd;">
-                        子标题 2
-                    </summary>
-                    <div style="padding: 1rem;">
-                        <p style="margin: 0 0 1rem;">这是子章节 2 的内容。这部分可以扩展为其他形式的内容展示。</p>
-                        <a href="#" style="text-decoration: none; color: #007bff;">查看详情 →</a>
-                    </div>
-                </details>
-        
-                <!-- 卡片 3 -->
-                <details style="width: 300px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
-                    <summary style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ddd;">
-                        子标题 3
-                    </summary>
-                    <div style="padding: 1rem;">
-                        <p style="margin: 0 0 1rem;">这是子章节 3 的内容。可以是文字、图片、链接或其他内容。</p>
-                        <a href="#" style="text-decoration: none; color: #007bff;">查看详情 →</a>
-                    </div>
-                </details>
-            </div>
-        </section>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+            <!-- 卡片 1 -->
+            <details style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
+                <summary style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ddd;">
+                    Annotation
+                </summary>
+                <div style="padding: 1rem;">
+                    <h2 style="font-size: 1.5em;">Annotation</h2>
+                    <p>We design a unified annotation system for both image and video generation, decomposing the factors
+                        influencing human preferences. To address the challenges of video evaluation, we incorporate extensive
+                        observations of dynamic content in videos into our judgment tasks, such as motion stability or movement
+                        quality. The annotation contains 3 million questions for 48k images and 2 million questions for 33k videos.
+                    </p>
+                    <table border="1" cellpadding="5" cellspacing="0"
+                        style="width: 80%; margin: 20px auto; border-collapse: collapse; font-size: 16px;">
+                        <thead>
+                            <tr>
+                                <th rowspan="2"><strong>Dimension</strong></th>
+                                <th colspan="2"><strong>#Sub-dimension</strong></th>
+                                <th colspan="2"><strong>#Checklist</strong></th>
+                            </tr>
+                            <tr>
+                                <th><strong>Image</strong></th>
+                                <th><strong>Video</strong></th>
+                                <th><strong>Image</strong></th>
+                                <th><strong>Video</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alignment</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>Composition</td>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>13</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Quality</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>14</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td>Fidelity</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>25</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>Safety & Emotion</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>8</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>Stability</td>
+                                <td>-</td>
+                                <td>5</td>
+                                <td>-</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>Dynamic</td>
+                                <td>-</td>
+                                <td>2</td>
+                                <td>-</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>Physics</td>
+                                <td>-</td>
+                                <td>1</td>
+                                <td>-</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>Preservation</td>
+                                <td>-</td>
+                                <td>2</td>
+                                <td>-</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Total</strong></td>
+                                <td><strong>18</strong></td>
+                                <td><strong>20</strong></td>
+                                <td><strong>61</strong></td>
+                                <td><strong>64</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><em>Taxonomy of annotation for VisionReward (Ours).</em></p>
+                    <table border="1" cellpadding="10" cellspacing="0"
+                        style="width: 80%; margin: 20px auto; border-collapse: collapse;font-size: 16px;">
+                        <thead>
+                            <tr>
+                                <th><strong>Type</strong></th>
+                                <th><strong>Source</strong></th>
+                                <th><strong>#Samples</strong></th>
+                                <th><strong>#Checklist</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3"><strong>Image</strong></td>
+                                <td>ImageRewardDB</td>
+                                <td>16K</td>
+                                <td>1M</td>
+                            </tr>
+                            <tr>
+                                <td>Pick-a-Pic</td>
+                                <td>16K</td>
+                                <td>1M</td>
+                            </tr>
+                            <tr>
+                                <td>HPDv2</td>
+                                <td>16K</td>
+                                <td>1M</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4"><strong>Video</strong></td>
+                                <td>CogVideoX</td>
+                                <td>10K</td>
+                                <td>0.6M</td>
+                            </tr>
+                            <tr>
+                                <td>Open-Sora</td>
+                                <td>10K</td>
+                                <td>0.6M</td>
+                            </tr>
+                            <tr>
+                                <td>VideoCrafter2</td>
+                                <td>10K</td>
+                                <td>0.6M</td>
+                            </tr>
+                            <tr>
+                                <td>Panda-70M</td>
+                                <td>3K</td>
+                                <td>0.2M</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><em>Statistics of source data and annotation.</em></p>
+                </div>
+            </details>
+            
+            <!-- 卡片 2 -->
+            <details style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
+                <summary style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ddd;">
+                    子标题 2
+                </summary>
+                <div style="padding: 1rem;">
+                    <p style="margin: 0 0 1rem;">这是子章节 2 的内容。这部分可以扩展为其他形式的内容展示。</p>
+                    <a href="#" style="text-decoration: none; color: #007bff;">查看详情 →</a>
+                </div>
+            </details>
+    
+            <!-- 卡片 3 -->
+            <details style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
+                <summary style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ddd;">
+                    子标题 3
+                </summary>
+                <div style="padding: 1rem;">
+                    <p style="margin: 0 0 1rem;">这是子章节 3 的内容。可以是文字、图片、链接或其他内容。</p>
+                    <a href="#" style="text-decoration: none; color: #007bff;">查看详情 →</a>
+                </div>
+            </details>
+        </div>
         
         <h3 >annotation</h3>
         table&questions
@@ -243,13 +384,13 @@ for Image and Video Generation" />
         figure&explanations
     </section>
 
-    <section id="annotation">
+    <!-- <section id="annotation">
         <h2 style="font-size: 1.5em;">Annotation</h2>
         <p>We design a unified annotation system for both image and video generation, decomposing the factors
             influencing human preferences. To address the challenges of video evaluation, we incorporate extensive
             observations of dynamic content in videos into our judgment tasks, such as motion stability or movement
             quality. The annotation contains 3 million questions for 48k images and 2 million questions for 33k videos.
-        </p>
+        </p> -->
         <!-- <div style="display: flex; justify-content: space-between;">
             <div style="display: flex; justify-content: center;width: 48%;height: auto;">
                 <figure>
@@ -267,7 +408,7 @@ for Image and Video Generation" />
             </div>
 
         </div> -->
-        <p>Annotation statistics of different sub-dimensions.</p>
+        <!-- <p>Annotation statistics of different sub-dimensions.</p>
         <table border="1" cellpadding="5" cellspacing="0"
             style="width: 80%; margin: 20px auto; border-collapse: collapse; font-size: 16px;">
             <thead>
@@ -407,7 +548,7 @@ for Image and Video Generation" />
                 </tr>
             </tbody>
         </table>
-        <p><em>Statistics of source data and annotation.</em></p>
+        <p><em>Statistics of source data and annotation.</em></p> -->
 
 
     </section>
