@@ -192,7 +192,7 @@ for Image and Video Generation" />
     <section id="overview">
         <h2 style="font-size: 2em;">Overview</h2>
         
-        <p>
+        <p style="max-width: 80%;">
             We present VisionReward, a general strategy to aligning visual generation
             models---both image and video generation---with human preferences through a
             fine-grained and multi-dimensional framework. We decompose human
@@ -393,8 +393,7 @@ for Image and Video Generation" />
                     </table>
                     <p><em>Statistics of source data and annotation.</em></p>
                     <p style="max-width: 80%;">In our annotation process, we design multiple-choice questions for each dimension, allowing annotators to select the option that best fits the image. Additionally, we further decompose these options into several binary (yes/no) questions, ultimately forming a checklist for evaluating each image or video. This checklist is then utilized for subsequent evaluation systems and reward model training.</p>
-                    </br>
-                    <p style="font-size: 1.2em;">Examples</p>
+                    <p style="font-size: 1.2em; width: 100%;">Examples</p>
                     <!-- <div style="padding: 1rem;display: flex;flex-wrap: wrap; justify-content: center;">
                         <div style="width: 50%;">
                             <div style="width: 100%;">
@@ -452,21 +451,21 @@ for Image and Video Generation" />
                             </tr>
                             <tr>
                                 <td>Beautiful Colors 😊</td>
-                                <td>Are the colors beautiful?</td>
+                                <td>Are the colors beautiful?✔️</br>br>Are the colors not ugly?✔️</td>
                                 <td>Good 😊</td>
-                                <td>Is the object's movement completely realistic?</td>
+                                <td>Is the object's movement completely realistic?✔️</br>Does the object's movement have no obvious realism issues?✔️</td>
                             </tr>
                             <tr>
                                 <td>Ordinary Colors 😐</td>
-                                <td>Are the colors not ugly?</td>
+                                <td>Are the colors beautiful?❌</br>br>Are the colors not ugly?✔️</td>
                                 <td>Normal 😐</td>
-                                <td>Does the object's movement have no obvious realism issues?</td>
+                                <td>Is the object's movement completely realistic?❌</br>Does the object's movement have no obvious realism issues?✔️</td>
                             </tr>
                             <tr>
                                 <td>Ugly Colors 😢</td>
-                                <td>-</td>
+                                <td>Are the colors beautiful?❌</br>br>Are the colors not ugly?❌</td>
                                 <td>Bad 😢</td>
-                                <td>-</td>
+                                <td>Is the object's movement completely realistic?❌</br>Does the object's movement have no obvious realism issues?❌</td>
                             </tr>
                         </tbody>
                     </table>
