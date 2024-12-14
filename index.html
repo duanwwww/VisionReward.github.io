@@ -258,7 +258,7 @@ for Image and Video Generation" />
                 <summary style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.5em; border-bottom: 1px solid #ddd;">
                     Annotation
                 </summary>
-                <div style="padding: 1rem;display: flex;flex-wrap: wrap; justify-content: center;">
+                <div style="padding: 1rem;display: flex;flex-wrap: wrap; justify-content: center;flex-direction: column;">
                     <p style="max-width: 80%;">We design a unified annotation system for both image and video generation, decomposing the factors
                         influencing human preferences. To address the challenges of video evaluation, we incorporate extensive
                         observations of dynamic content in videos into our judgment tasks, such as motion stability or movement
@@ -406,7 +406,7 @@ for Image and Video Generation" />
                     <p><em>Statistics of source data and annotation.</em></p>
                     <p style="max-width: 80%;">In our annotation process, we design multiple-choice questions for each dimension, allowing annotators to select the option that best fits the image. Additionally, we further decompose these options into several binary (yes/no) questions, ultimately forming a checklist for evaluating each image or video. This checklist is then utilized for subsequent evaluation systems and reward model training.</p>
                     <p style="font-size: 1.2em;">Examples</p>
-                    <div style="padding: 1rem;display: flex;flex-wrap: wrap; justify-content: center;">
+                    <!-- <div style="padding: 1rem;display: flex;flex-wrap: wrap; justify-content: center;">
                         <div style="width: 50%;">
                             <div style="width: 100%;">
                                 <p>Color Aesthetic (Image) </p>
@@ -418,8 +418,6 @@ for Image and Video Generation" />
                                     <p>Ordinary Colors <i class="far fa-meh" title="normal"></i></li>
                                     <p>Ugly Colors <i class="far fa-frown" title="bad"></i></li>
                                 </div>
-                            
-                                <!-- 右边栏目 -->
                                 <div class="column">
                                     <h2>Checklist</h2>
                                     <p>Are the colors beautiful?</p>
@@ -439,7 +437,6 @@ for Image and Video Generation" />
                                     <p>Bad <i class="far fa-frown" title="bad"></i></li>
                                 </div>
                             
-                                <!-- 右边栏目 -->
                                 <div class="column">
                                     <h2>Checklist</h2>
                                     <p>Is the object's movement completely realistic?</p>
@@ -447,7 +444,43 @@ for Image and Video Generation" />
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+                    <table border="1">
+                        <!-- 表头 -->
+                        <thead>
+                            <tr>
+                                <th colspan="2" class="category-title">Color Aesthetic (Image)</th>
+                                <th colspan="2" class="category-title">Movement Reality (Video)</th>
+                            </tr>
+                        </thead>
+                        <!-- 表格内容 -->
+                        <tbody>
+                            <tr>
+                                <td><strong>Options</strong></td>
+                                <td><strong>Checklist</strong></td>
+                                <td><strong>Options</strong></td>
+                                <td><strong>Checklist</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Beautiful Colors 😊</td>
+                                <td>Are the colors beautiful?</td>
+                                <td>Good 😊</td>
+                                <td>Is the object's movement completely realistic?</td>
+                            </tr>
+                            <tr>
+                                <td>Ordinary Colors 😐</td>
+                                <td>Are the colors not ugly?</td>
+                                <td>Normal 😐</td>
+                                <td>Does the object's movement have no obvious realism issues?</td>
+                            </tr>
+                            <tr>
+                                <td>Ugly Colors 😢</td>
+                                <td>-</td>
+                                <td>Bad 😢</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </details>
             
