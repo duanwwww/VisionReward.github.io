@@ -41,7 +41,7 @@ for Image and Video Generation" />
             text-decoration: none;
             color: blue;
         }
-        
+
         a:hover {
             text-decoration: underline;
         }
@@ -52,30 +52,44 @@ for Image and Video Generation" />
             border-collapse: collapse;
             font-size: 16px;
             text-align: center;
-            table-layout: fixed;
+            /* table-layout: fixed; */
         }
-        th, td {
+
+        th,
+        td {
             padding: 10px;
-            vertical-align: middle; /* 垂直居中 */
+            vertical-align: middle;
+            /* 垂直居中 */
         }
+
         th {
             font-weight: bold;
             background-color: #f4f4f4;
         }
+
         tr:nth-child(even) {
             background-color: #f9f9f9;
         }
+
         tr:nth-child(odd) {
             background-color: #ffffff;
         }
+
         tr.image-row {
-            background-color: #ffffff; /* 所有 Image 行白色背景 */
+            background-color: #ffffff;
+            /* 所有 Image 行白色背景 */
         }
+
         tr.video-row {
-            background-color: #f0f0f0; /* 所有 Video 行灰色背景 */
+            background-color: #f0f0f0;
+            /* 所有 Video 行灰色背景 */
         }
-        table, th, td {
-            border: none; /* 移除边框 */
+
+        table,
+        th,
+        td {
+            border: none;
+            /* 移除边框 */
         }
 
         /* 导航栏样式 */
@@ -116,6 +130,7 @@ for Image and Video Generation" />
             font-family: Arial, sans-serif;
             display: flex;
         }
+
         .column {
             width: 30%;
             padding: 20px;
@@ -126,6 +141,7 @@ for Image and Video Generation" />
             align-items: center;
             font-size: 1em;
         }
+
         .column h2 {
             margin-bottom: 5px;
             text-align: center;
@@ -165,7 +181,7 @@ for Image and Video Generation" />
             </span>
         </div>
     </div>
-    
+
     <div style="display: flex; justify-content: center;">
         <figure style="max-width: 60%; height: auto;">
             <img src="https://duanwwww.github.io/VisionReward.github.io/images/OverView.jpg"
@@ -186,28 +202,30 @@ for Image and Video Generation" />
         <a href="#citation">Citation</a>
     </nav>
 
-    
+
 
     <!-- 页面内容 -->
     <section id="overview">
         <h2 style="font-size: 2em;">Overview</h2>
-        
-        <p style="max-width: 80%;">
-            We present VisionReward, a general strategy to aligning visual generation
-            models---both image and video generation---with human preferences through a
-            fine-grained and multi-dimensional framework. We decompose human
-            preferences in images and videos into multiple dimensions, each
-            represented by a series of judgment questions, linearly weighted and
-            summed to an interpretable and accurate score. To address the challenges
-            of video quality assessment, we systematically analyze various dynamic
-            features of videos, which helps VisionReward surpass VideoScore by 17.2%
-            and achieve top performance for video preference prediction. Based on
-            VisionReward, we develop a multi-objective preference learning algorithm
-            that effectively addresses the issue of confounding factors within
-            preference data. Our approach significantly outperforms existing image
-            and video scoring methods on both machine metrics and human evaluation.
-            The models and preference data will be open-sourced.
-        </p>
+        <div style="display: flex; justify-content: center;">
+            <p style="max-width: 80%;">
+                We present VisionReward, a general strategy to aligning visual generation
+                models---both image and video generation---with human preferences through a
+                fine-grained and multi-dimensional framework. We decompose human
+                preferences in images and videos into multiple dimensions, each
+                represented by a series of judgment questions, linearly weighted and
+                summed to an interpretable and accurate score. To address the challenges
+                of video quality assessment, we systematically analyze various dynamic
+                features of videos, which helps VisionReward surpass VideoScore by 17.2%
+                and achieve top performance for video preference prediction. Based on
+                VisionReward, we develop a multi-objective preference learning algorithm
+                that effectively addresses the issue of confounding factors within
+                preference data. Our approach significantly outperforms existing image
+                and video scoring methods on both machine metrics and human evaluation.
+                The models and preference data will be open-sourced.
+            </p>
+        </div>
+
         <div style="display: flex; justify-content: center;">
             <figure style="max-width: 100%; height: auto;">
                 <img src="https://duanwwww.github.io/VisionReward.github.io/images/TopDemo.jpg"
@@ -217,42 +235,55 @@ for Image and Video Generation" />
         </div>
         <div style="display: flex; justify-content: center; max-width: 100%;">
             <figure style="max-width: 33%; height: auto;">
-                <video src="https://duanwwww.github.io/VisionReward.github.io/videos/ori_2.mp4" style="width: 90%; height: auto;" controls>
+                <video src="https://duanwwww.github.io/VisionReward.github.io/videos/ori_2.mp4"
+                    style="width: 90%; height: auto;" controls>
                 </video>
                 <figcaption>original
                 </figcaption>
             </figure>
             <figure style="max-width: 33%; height: auto;">
-                <video src="https://duanwwww.github.io/VisionReward.github.io/videos/videoscore_2.mp4" style="width: 90%; height: auto;" controls>
+                <video src="https://duanwwww.github.io/VisionReward.github.io/videos/videoscore_2.mp4"
+                    style="width: 90%; height: auto;" controls>
                 </video>
                 <figcaption>DPO with VideoScore
                 </figcaption>
             </figure>
             <figure style="max-width: 33%; height: auto;">
-                <video src="https://duanwwww.github.io/VisionReward.github.io/videos/ours_2.mp4" style="width: 90%; height: auto;" controls>
+                <video src="https://duanwwww.github.io/VisionReward.github.io/videos/ours_2.mp4"
+                    style="width: 90%; height: auto;" controls>
                 </video>
                 <figcaption>MPO with VisionReward(Ours)
                 </figcaption>
             </figure>
         </div>
-        <p, style="text-align: center;">Samples of VisionReward and Multi-Objective Preference Optimization (MPO) algorithm.</p>
+        <p, style="text-align: center;">Samples of VisionReward and Multi-Objective Preference Optimization (MPO)
+            algorithm.</p>
     </section>
 
     <section id="intro">
         <h2 style="font-size: 2em;">Introduction</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
             <!-- 卡片 1 -->
-            <details style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
-                <summary style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.5em; border-bottom: 1px solid #ddd;">
+            <details
+                style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
+                <summary
+                    style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.5em; border-bottom: 1px solid #ddd;">
                     Annotation
                 </summary>
                 <div style="padding: 1rem;display: flex;flex-wrap: wrap; justify-content: center;">
-                    <p style="max-width: 80%;">We design a unified annotation system for both image and video generation, decomposing the factors
-                        influencing human preferences. To address the challenges of video evaluation, we incorporate extensive
-                        observations of dynamic content in videos into our judgment tasks, such as motion stability or movement
-                        quality. The annotation contains 3 million questions for 48k images and 2 million questions for 33k videos.
+                    <p style="max-width: 80%;">We design a unified annotation system for both image and video
+                        generation, decomposing the factors
+                        influencing human preferences. To address the challenges of video evaluation, we incorporate
+                        extensive
+                        observations of dynamic content in videos into our judgment tasks, such as motion stability or
+                        movement
+                        quality. The annotation contains 3 million questions for 48k images and 2 million questions for
+                        33k videos.
                     </p>
-                    <p style="max-width: 80%;">When evaluating an image or video, human preferences are often a result of the interplay of multiple factors, necessitating a balance among various considerations. To deconstruct human preferences systematically, we develop a fine-grained and multi-dimensional preference decomposition framework.
+                    <p style="max-width: 80%;">When evaluating an image or video, human preferences are often a result
+                        of the interplay of multiple factors, necessitating a balance among various considerations. To
+                        deconstruct human preferences systematically, we develop a fine-grained and multi-dimensional
+                        preference decomposition framework.
                     </p>
                     <table>
                         <thead>
@@ -392,89 +423,59 @@ for Image and Video Generation" />
                         </tbody>
                     </table>
                     <p><em>Statistics of source data and annotation.</em></p>
-                    <p style="max-width: 80%;">In our annotation process, we design multiple-choice questions for each dimension, allowing annotators to select the option that best fits the image. Additionally, we further decompose these options into several binary (yes/no) questions, ultimately forming a checklist for evaluating each image or video. This checklist is then utilized for subsequent evaluation systems and reward model training.</p>
+                    <p style="max-width: 80%;">In our annotation process, we design multiple-choice questions for each
+                        dimension, allowing annotators to select the option that best fits the image. Additionally, we
+                        further decompose these options into several binary (yes/no) questions, ultimately forming a
+                        checklist for evaluating each image or video. This checklist is then utilized for subsequent
+                        evaluation systems and reward model training.</p>
                     <p style="font-size: 1.2em; width: 100%;">Examples</p>
-                    <!-- <div style="padding: 1rem;display: flex;flex-wrap: wrap; justify-content: center;">
-                        <div style="width: 50%;">
-                            <div style="width: 100%;">
-                                <p>Color Aesthetic (Image) </p>
-                            </div>
-                            <div class="two_column">
-                                <div class="column">
-                                    <h2>Options</h2>
-                                    <p>Beautiful Colors <i class="far fa-smile" title="good"></i></li>
-                                    <p>Ordinary Colors <i class="far fa-meh" title="normal"></i></li>
-                                    <p>Ugly Colors <i class="far fa-frown" title="bad"></i></li>
-                                </div>
-                                <div class="column">
-                                    <h2>Checklist</h2>
-                                    <p>Are the colors beautiful?</p>
-                                    <p>Are the colors not ugly?</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="width: 50%;">
-                            <div style="width: 100%;">
-                                <p>Movement Reality (Video) </p>
-                            </div>
-                            <div class="two_column">
-                                <div class="column">
-                                    <h2>Options</h2>
-                                    <p>Good <i class="far fa-smile" title="good"></i></li>
-                                    <p>Normal <i class="far fa-meh" title="normal"></i></li>
-                                    <p>Bad <i class="far fa-frown" title="bad"></i></li>
-                                </div>
-                            
-                                <div class="column">
-                                    <h2>Checklist</h2>
-                                    <p>Is the object's movement completely realistic?</p>
-                                    <p>Does the object's movement have no obvious realism issues?</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                     <table border="1">
                         <!-- 表头 -->
                         <thead>
                             <tr>
-                                <th colspan="2" class="category-title">Color Aesthetic (Image)</th>
-                                <th colspan="2" class="category-title">Movement Reality (Video)</th>
+                                <th colspan="2" style="border-right: 1px">Color Aesthetic (Image)</th>
+                                <th colspan="2" >Movement Reality (Video)</th>
                             </tr>
                         </thead>
                         <!-- 表格内容 -->
                         <tbody>
                             <tr>
                                 <td><strong>Options</strong></td>
-                                <td><strong>Checklist</strong></td>
+                                <td style="border-right: 1px"><strong>Checklist</strong></td>
                                 <td><strong>Options</strong></td>
                                 <td><strong>Checklist</strong></td>
                             </tr>
                             <tr>
                                 <td>Beautiful Colors 😊</td>
-                                <td>Are the colors beautiful?✔️</br>br>Are the colors not ugly?✔️</td>
+                                <td style="border-right: 1px">Are the colors beautiful?✔️</br>Are the colors not ugly?✔️</td>
                                 <td>Good 😊</td>
-                                <td>Is the object's movement completely realistic?✔️</br>Does the object's movement have no obvious realism issues?✔️</td>
+                                <td>Is the object's movement completely realistic?✔️</br>Does the object's movement have
+                                    no obvious realism issues?✔️</td>
                             </tr>
                             <tr>
                                 <td>Ordinary Colors 😐</td>
-                                <td>Are the colors beautiful?❌</br>br>Are the colors not ugly?✔️</td>
+                                <td style="border-right: 1px">Are the colors beautiful?❌</br>Are the colors not ugly?✔️</td>
                                 <td>Normal 😐</td>
-                                <td>Is the object's movement completely realistic?❌</br>Does the object's movement have no obvious realism issues?✔️</td>
+                                <td>Is the object's movement completely realistic?❌</br>Does the object's movement have
+                                    no obvious realism issues?✔️</td>
                             </tr>
                             <tr>
                                 <td>Ugly Colors 😢</td>
-                                <td>Are the colors beautiful?❌</br>br>Are the colors not ugly?❌</td>
+                                <td style="border-right: 1px">Are the colors beautiful?❌</br>Are the colors not ugly?❌</td>
                                 <td>Bad 😢</td>
-                                <td>Is the object's movement completely realistic?❌</br>Does the object's movement have no obvious realism issues?❌</td>
+                                <td>Is the object's movement completely realistic?❌</br>Does the object's movement have
+                                    no obvious realism issues?❌</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </details>
-            
+
             <!-- 卡片 2 -->
-            <details style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
-                <summary style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ddd;">
+            <details
+                style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
+                <summary
+                    style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ddd;">
                     子标题 2
                 </summary>
                 <div style="padding: 1rem;">
@@ -482,10 +483,12 @@ for Image and Video Generation" />
                     <a href="#" style="text-decoration: none; color: #007bff;">查看详情 →</a>
                 </div>
             </details>
-    
+
             <!-- 卡片 3 -->
-            <details style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
-                <summary style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ddd;">
+            <details
+                style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
+                <summary
+                    style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ddd;">
                     子标题 3
                 </summary>
                 <div style="padding: 1rem;">
@@ -494,8 +497,8 @@ for Image and Video Generation" />
                 </div>
             </details>
         </div>
-        
-        <h3 >annotation</h3>
+
+        <h3>annotation</h3>
         table&questions
         <h3>model</h3>
         scoring examples
@@ -511,7 +514,7 @@ for Image and Video Generation" />
             observations of dynamic content in videos into our judgment tasks, such as motion stability or movement
             quality. The annotation contains 3 million questions for 48k images and 2 million questions for 33k videos.
         </p> -->
-        <!-- <div style="display: flex; justify-content: space-between;">
+    <!-- <div style="display: flex; justify-content: space-between;">
             <div style="display: flex; justify-content: center;width: 48%;height: auto;">
                 <figure>
                     <img src="https://duanwwww.github.io/VisionReward.github.io/images/attributes_annotation_distribution_image.jpg"
@@ -528,7 +531,7 @@ for Image and Video Generation" />
             </div>
 
         </div> -->
-        <!-- <p>Annotation statistics of different sub-dimensions.</p>
+    <!-- <p>Annotation statistics of different sub-dimensions.</p>
         <table border="1" cellpadding="5" cellspacing="0"
             style="width: 80%; margin: 20px auto; border-collapse: collapse; font-size: 16px;">
             <thead>
@@ -735,7 +738,7 @@ for Image and Video Generation" />
     </section> -->
 
     <section id="experiments">
-        <h2  style="font-size: 1.5em;">Experiments</h2>
+        <h2 style="font-size: 1.5em;">Experiments</h2>
         <table border="1" cellpadding="10" cellspacing="0"
             style="width: 80%; margin: 20px auto; border-collapse: collapse;font-size: 16px;">
             <thead>
@@ -982,7 +985,7 @@ for Image and Video Generation" />
     </section>
 
     <section id="case_study">
-        <h2  style="font-size: 1.5em;">Case Study</h2>
+        <h2 style="font-size: 1.5em;">Case Study</h2>
         <div style="display: flex; justify-content: center;">
             <figure style="max-width: 60%; height: auto;">
                 <img src="https://duanwwww.github.io/VisionReward.github.io/images/mpo_case_image.jpg"
@@ -1007,7 +1010,7 @@ for Image and Video Generation" />
     </section>
 
     <section id="citation">
-        <h2  style="font-size: 1.5em;">Citation</h2>
+        <h2 style="font-size: 1.5em;">Citation</h2>
         <p>VisionReward</p>
     </section>
 </body>
