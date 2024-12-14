@@ -80,9 +80,11 @@ for Image and Video Generation" />
         tr:nth-child(odd) {
             background-color: #ffffff;
         }
-        td[rowspan] {
-            background-color: #e8f5e9; /* 为类别提供区分背景色 */
-            font-weight: bold;
+        tr.image-row {
+            background-color: #ffffff; /* 所有 Image 行白色背景 */
+        }
+        tr.video-row {
+            background-color: #f0f0f0; /* 所有 Video 行灰色背景 */
         }
         table, th, td {
             border: none; /* 移除边框 */
@@ -352,8 +354,7 @@ for Image and Video Generation" />
                         </tbody>
                     </table>
                     <p><em>Taxonomy of annotation for VisionReward (Ours).</em></p>
-                    <table border="1" cellpadding="10" cellspacing="0"
-                        style="width: 80%; margin: 20px auto; border-collapse: collapse;font-size: 16px;">
+                    <table>
                         <thead>
                             <tr>
                                 <th><strong>Type</strong></th>
@@ -363,39 +364,39 @@ for Image and Video Generation" />
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr class="image-row">
                                 <td rowspan="3" style="vertical-align: middle; "><strong>Image</strong></td>
                                 <td>ImageRewardDB</td>
                                 <td>16K</td>
                                 <td>1M</td>
                             </tr>
-                            <tr>
+                            <tr class="image-row">
                                 <td>Pick-a-Pic</td>
                                 <td>16K</td>
                                 <td>1M</td>
                             </tr>
-                            <tr>
+                            <tr class="image-row">
                                 <td>HPDv2</td>
                                 <td>16K</td>
                                 <td>1M</td>
                             </tr>
-                            <tr>
+                            <tr class="video-row">
                                 <td rowspan="4" style="vertical-align: middle; "><strong>Video</strong></td>
                                 <td>CogVideoX</td>
                                 <td>10K</td>
                                 <td>0.6M</td>
                             </tr>
-                            <tr>
+                            <tr class="video-row">
                                 <td>Open-Sora</td>
                                 <td>10K</td>
                                 <td>0.6M</td>
                             </tr>
-                            <tr>
+                            <tr class="video-row">
                                 <td>VideoCrafter2</td>
                                 <td>10K</td>
                                 <td>0.6M</td>
                             </tr>
-                            <tr>
+                            <tr class="video-row">
                                 <td>Panda-70M</td>
                                 <td>3K</td>
                                 <td>0.2M</td>
