@@ -281,6 +281,57 @@ for Image and Video Generation" />
                         quality. The annotation contains 3 million questions for 48k images and 2 million questions for
                         33k videos.
                     </p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><strong>Type</strong></th>
+                                <th><strong>Source</strong></th>
+                                <th><strong>#Samples</strong></th>
+                                <th><strong>#Checklist</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="image-row">
+                                <td rowspan="3" style="vertical-align: middle; "><strong>Image</strong></td>
+                                <td>ImageRewardDB</td>
+                                <td>16K</td>
+                                <td>1M</td>
+                            </tr>
+                            <tr class="image-row">
+                                <td>Pick-a-Pic</td>
+                                <td>16K</td>
+                                <td>1M</td>
+                            </tr>
+                            <tr class="image-row">
+                                <td>HPDv2</td>
+                                <td>16K</td>
+                                <td>1M</td>
+                            </tr>
+                            <tr class="video-row">
+                                <td rowspan="4" style="vertical-align: middle; "><strong>Video</strong></td>
+                                <td>CogVideoX</td>
+                                <td>10K</td>
+                                <td>0.6M</td>
+                            </tr>
+                            <tr class="video-row">
+                                <td>Open-Sora</td>
+                                <td>10K</td>
+                                <td>0.6M</td>
+                            </tr>
+                            <tr class="video-row">
+                                <td>VideoCrafter2</td>
+                                <td>10K</td>
+                                <td>0.6M</td>
+                            </tr>
+                            <tr class="video-row">
+                                <td>Panda-70M</td>
+                                <td>3K</td>
+                                <td>0.2M</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><em>Statistics of source data and annotation.</em></p>
+                    </br>
                     <p style="max-width: 80%;text-align: left; font-size: 1em;">🔷 When evaluating an image or video, human
                         preferences are often a result
                         of the interplay of multiple factors, necessitating a balance among various considerations. To
@@ -375,56 +426,7 @@ for Image and Video Generation" />
                         </tbody>
                     </table>
                     <p><em>Taxonomy of annotation for VisionReward (Ours).</em></p>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th><strong>Type</strong></th>
-                                <th><strong>Source</strong></th>
-                                <th><strong>#Samples</strong></th>
-                                <th><strong>#Checklist</strong></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="image-row">
-                                <td rowspan="3" style="vertical-align: middle; "><strong>Image</strong></td>
-                                <td>ImageRewardDB</td>
-                                <td>16K</td>
-                                <td>1M</td>
-                            </tr>
-                            <tr class="image-row">
-                                <td>Pick-a-Pic</td>
-                                <td>16K</td>
-                                <td>1M</td>
-                            </tr>
-                            <tr class="image-row">
-                                <td>HPDv2</td>
-                                <td>16K</td>
-                                <td>1M</td>
-                            </tr>
-                            <tr class="video-row">
-                                <td rowspan="4" style="vertical-align: middle; "><strong>Video</strong></td>
-                                <td>CogVideoX</td>
-                                <td>10K</td>
-                                <td>0.6M</td>
-                            </tr>
-                            <tr class="video-row">
-                                <td>Open-Sora</td>
-                                <td>10K</td>
-                                <td>0.6M</td>
-                            </tr>
-                            <tr class="video-row">
-                                <td>VideoCrafter2</td>
-                                <td>10K</td>
-                                <td>0.6M</td>
-                            </tr>
-                            <tr class="video-row">
-                                <td>Panda-70M</td>
-                                <td>3K</td>
-                                <td>0.2M</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p><em>Statistics of source data and annotation.</em></p>
+                    </br>
                     <p style="max-width: 80%;text-align: left">🔷 In our annotation process, we design multiple-choice
                         questions for each
                         dimension, allowing annotators to select the option that best fits the image. Additionally, we
