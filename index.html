@@ -208,7 +208,7 @@ for Image and Video Generation" />
     <section id="overview">
         <h2 style="font-size: 2em;">Overview</h2>
         <div style="display: flex; justify-content: center;">
-            <p style="max-width: 80%;text-align: left">
+            <p style="max-width: 80%;text-align: left; font-size: 1em;">
                 We present VisionReward, a general strategy to aligning visual generation
                 models---both image and video generation---with human preferences through a
                 fine-grained and multi-dimensional framework. We decompose human
@@ -271,7 +271,8 @@ for Image and Video Generation" />
                     Annotation
                 </summary>
                 <div style="padding: 1rem;display: flex;flex-wrap: wrap; justify-content: center;">
-                    <p style="max-width: 80%;text-align: left">We design a unified annotation system for both image and video
+                    <p style="max-width: 80%;text-align: left; font-size: 1em;">🔷 We design a unified annotation system
+                        for both image and video
                         generation, decomposing the factors
                         influencing human preferences. To address the challenges of video evaluation, we incorporate
                         extensive
@@ -280,7 +281,8 @@ for Image and Video Generation" />
                         quality. The annotation contains 3 million questions for 48k images and 2 million questions for
                         33k videos.
                     </p>
-                    <p style="max-width: 80%;text-align: left">When evaluating an image or video, human preferences are often a result
+                    <p style="max-width: 80%;text-align: left; font-size: 1em;">🔷 When evaluating an image or video, human
+                        preferences are often a result
                         of the interplay of multiple factors, necessitating a balance among various considerations. To
                         deconstruct human preferences systematically, we develop a fine-grained and multi-dimensional
                         preference decomposition framework.
@@ -423,7 +425,8 @@ for Image and Video Generation" />
                         </tbody>
                     </table>
                     <p><em>Statistics of source data and annotation.</em></p>
-                    <p style="max-width: 80%;text-align: left">In our annotation process, we design multiple-choice questions for each
+                    <p style="max-width: 80%;text-align: left">🔷 In our annotation process, we design multiple-choice
+                        questions for each
                         dimension, allowing annotators to select the option that best fits the image. Additionally, we
                         further decompose these options into several binary (yes/no) questions, ultimately forming a
                         checklist for evaluating each image or video. This checklist is then utilized for subsequent
@@ -436,7 +439,7 @@ for Image and Video Generation" />
                         <thead>
                             <tr>
                                 <th colspan="2" style="border-right: 1px">Color Aesthetic (Image)</th>
-                                <th colspan="2" >Movement Reality (Video)</th>
+                                <th colspan="2">Movement Reality (Video)</th>
                             </tr>
                         </thead>
                         <!-- 表格内容 -->
@@ -449,21 +452,24 @@ for Image and Video Generation" />
                             </tr>
                             <tr>
                                 <td>Beautiful Colors 😊</td>
-                                <td style="border-right: 1px">Are the colors beautiful?✔️</br>Are the colors not ugly?✔️</td>
+                                <td style="border-right: 1px">Are the colors beautiful?✔️</br>Are the colors not ugly?✔️
+                                </td>
                                 <td>Good 😊</td>
                                 <td>Is the object's movement completely realistic?✔️</br>Does the object's movement have
                                     no obvious realism issues?✔️</td>
                             </tr>
                             <tr>
                                 <td>Ordinary Colors 😐</td>
-                                <td style="border-right: 1px">Are the colors beautiful?❌</br>Are the colors not ugly?✔️</td>
+                                <td style="border-right: 1px">Are the colors beautiful?❌</br>Are the colors not ugly?✔️
+                                </td>
                                 <td>Normal 😐</td>
                                 <td>Is the object's movement completely realistic?❌</br>Does the object's movement have
                                     no obvious realism issues?✔️</td>
                             </tr>
                             <tr>
                                 <td>Ugly Colors 😢</td>
-                                <td style="border-right: 1px">Are the colors beautiful?❌</br>Are the colors not ugly?❌</td>
+                                <td style="border-right: 1px">Are the colors beautiful?❌</br>Are the colors not ugly?❌
+                                </td>
                                 <td>Bad 😢</td>
                                 <td>Is the object's movement completely realistic?❌</br>Does the object's movement have
                                     no obvious realism issues?❌</td>
@@ -507,175 +513,6 @@ for Image and Video Generation" />
         <h3>examples</h3>
         <h3>mpo</h3>
         figure&explanations
-    </section>
-
-    <!-- <section id="annotation">
-        <h2 style="font-size: 1.5em;">Annotation</h2>
-        <p>We design a unified annotation system for both image and video generation, decomposing the factors
-            influencing human preferences. To address the challenges of video evaluation, we incorporate extensive
-            observations of dynamic content in videos into our judgment tasks, such as motion stability or movement
-            quality. The annotation contains 3 million questions for 48k images and 2 million questions for 33k videos.
-        </p> -->
-    <!-- <div style="display: flex; justify-content: space-between;">
-            <div style="display: flex; justify-content: center;width: 48%;height: auto;">
-                <figure>
-                    <img src="https://duanwwww.github.io/VisionReward.github.io/images/attributes_annotation_distribution_image.jpg"
-                        alt="Text-to-image" style="width: 100%; height: auto;">
-                    <figcaption>Text-to-image</figcaption>
-                </figure>
-            </div>
-            <div style="display: flex; justify-content: center;width: 48%;height: auto;">
-                <figure>
-                    <img src="https://duanwwww.github.io/VisionReward.github.io/images/attributes_annotation_distribution_video.jpg"
-                        alt="Text-to-video" style="width: 100%; height: auto;">
-                    <figcaption>Text-to-video</figcaption>
-                </figure>
-            </div>
-
-        </div> -->
-    <!-- <p>Annotation statistics of different sub-dimensions.</p>
-        <table border="1" cellpadding="5" cellspacing="0"
-            style="width: 80%; margin: 20px auto; border-collapse: collapse; font-size: 16px;">
-            <thead>
-                <tr>
-                    <th rowspan="2"><strong>Dimension</strong></th>
-                    <th colspan="2"><strong>#Sub-dimension</strong></th>
-                    <th colspan="2"><strong>#Checklist</strong></th>
-                </tr>
-                <tr>
-                    <th><strong>Image</strong></th>
-                    <th><strong>Video</strong></th>
-                    <th><strong>Image</strong></th>
-                    <th><strong>Video</strong></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Alignment</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>Composition</td>
-                    <td>5</td>
-                    <td>1</td>
-                    <td>13</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Quality</td>
-                    <td>5</td>
-                    <td>4</td>
-                    <td>14</td>
-                    <td>14</td>
-                </tr>
-                <tr>
-                    <td>Fidelity</td>
-                    <td>5</td>
-                    <td>3</td>
-                    <td>25</td>
-                    <td>9</td>
-                </tr>
-                <tr>
-                    <td>Safety & Emotion</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>8</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>Stability</td>
-                    <td>-</td>
-                    <td>5</td>
-                    <td>-</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>Dynamic</td>
-                    <td>-</td>
-                    <td>2</td>
-                    <td>-</td>
-                    <td>8</td>
-                </tr>
-                <tr>
-                    <td>Physics</td>
-                    <td>-</td>
-                    <td>1</td>
-                    <td>-</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>Preservation</td>
-                    <td>-</td>
-                    <td>2</td>
-                    <td>-</td>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td><strong>Total</strong></td>
-                    <td><strong>18</strong></td>
-                    <td><strong>20</strong></td>
-                    <td><strong>61</strong></td>
-                    <td><strong>64</strong></td>
-                </tr>
-            </tbody>
-        </table>
-        <p><em>Taxonomy of annotation for VisionReward (Ours).</em></p>
-        <table border="1" cellpadding="10" cellspacing="0"
-            style="width: 80%; margin: 20px auto; border-collapse: collapse;font-size: 16px;">
-            <thead>
-                <tr>
-                    <th><strong>Type</strong></th>
-                    <th><strong>Source</strong></th>
-                    <th><strong>#Samples</strong></th>
-                    <th><strong>#Checklist</strong></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td rowspan="3"><strong>Image</strong></td>
-                    <td>ImageRewardDB</td>
-                    <td>16K</td>
-                    <td>1M</td>
-                </tr>
-                <tr>
-                    <td>Pick-a-Pic</td>
-                    <td>16K</td>
-                    <td>1M</td>
-                </tr>
-                <tr>
-                    <td>HPDv2</td>
-                    <td>16K</td>
-                    <td>1M</td>
-                </tr>
-                <tr>
-                    <td rowspan="4"><strong>Video</strong></td>
-                    <td>CogVideoX</td>
-                    <td>10K</td>
-                    <td>0.6M</td>
-                </tr>
-                <tr>
-                    <td>Open-Sora</td>
-                    <td>10K</td>
-                    <td>0.6M</td>
-                </tr>
-                <tr>
-                    <td>VideoCrafter2</td>
-                    <td>10K</td>
-                    <td>0.6M</td>
-                </tr>
-                <tr>
-                    <td>Panda-70M</td>
-                    <td>3K</td>
-                    <td>0.2M</td>
-                </tr>
-            </tbody>
-        </table>
-        <p><em>Statistics of source data and annotation.</em></p> -->
-
-
     </section>
 
     <!-- <section id="benchmark">
