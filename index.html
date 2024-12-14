@@ -135,10 +135,10 @@ for Image and Video Generation" />
     <nav class="navbar">
         <a href="#overview">Overview</a>
         <a href="#intro">Introduction</a>
-        <a href="annotation">Annotation</a>
+        <!-- <a href="annotation">Annotation</a> -->
         <!-- <a href="#benchmark">Benchmark</a> -->
-        <a href="#experiments">Experiments</a>
-        <a href="#case_study">MPO Case Study</a>
+        <!-- <a href="#experiments">Experiments</a> -->
+        <a href="#case_study">Case Study</a>
         <a href="#citation">Citation</a>
     </nav>
 
@@ -173,10 +173,34 @@ for Image and Video Generation" />
                 </figcaption>
             </figure>
         </div>
+        <div style="display: flex; justify-content: center;">
+            <div style="display: flex; justify-content: center; width: 33%;height: auto;">
+                <video src="https://duanwwww.github.io/VisionReward.github.io/videos/videos/ori_2.mp4" style="width: 90%; height: auto;">
+                </video>
+                <p>original</p>
+            </div>
+            <div style="display: flex; justify-content: center; width: 33%;height: auto;">
+                <video src="https://duanwwww.github.io/VisionReward.github.io/videos/videos/videoscore_2.mp4" style="width: 90%; height: auto;">
+                </video>
+                <p>DPO with VideoScore</p>
+            </div>
+            <div style="display: flex; justify-content: center; width: 33%;height: auto;">
+                <video src="https://duanwwww.github.io/VisionReward.github.io/videos/videos/ours_2.mp4" style="width: 90%; height: auto;">
+                </video>
+                <p>MPO with VisionReward(Ours)</p>
+            </div>
+        </div>
     </section>
 
     <section id="intro">
         <h2 style="font-size: 1.5em;">Introduction</h2>
+        <h3 >annotation</h3>
+        table&questions
+        <h3>model</h3>
+        scoring examples
+        <h3>examples</h3>
+        <h3>mpo</h3>
+        figure&explanations
     </section>
 
     <section id="annotation">
@@ -610,8 +634,6 @@ for Image and Video Generation" />
                 constructed from our annotation.* We test LLaVA-v1.5-7B for image and LLava-Next-Video-34B for
                 video.</em></p>
 
-        <h3 style="font-size: 1.2em;">MPO experiments and results</h3>
-        <p>TODO</p>
         <!-- <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
             <div style="display: flex; justify-content: center;width: 48%;height: auto;">
                 <figure>
@@ -659,7 +681,7 @@ for Image and Video Generation" />
     </section>
 
     <section id="case_study">
-        <h2  style="font-size: 1.5em;">MPO Case Study</h2>
+        <h2  style="font-size: 1.5em;">Case Study</h2>
         <div style="display: flex; justify-content: center;">
             <figure style="max-width: 60%; height: auto;">
                 <img src="https://duanwwww.github.io/VisionReward.github.io/images/mpo_case_image.jpg"
@@ -667,7 +689,7 @@ for Image and Video Generation" />
                 <figcaption>Qualitative result of MPO in text-to-image.</figcaption>
             </figure>
         </div>
-        <div style="display: flex; justify-content: center;">
+        <!-- <div style="display: flex; justify-content: center;">
             <figure style="max-width: 60%; height: auto;">
                 <img src="https://duanwwww.github.io/VisionReward.github.io/images/dpo_case_1.jpg"
                     alt="SQualitative result of MPO in text-to-video." style="max-width: 100%; height: auto;" />
@@ -680,7 +702,7 @@ for Image and Video Generation" />
                     alt="Qualitative result of MPO in text-to-video." style="max-width: 100%; height: auto;" />
                 <figcaption>Qualitative result of MPO in text-to-video.</figcaption>
             </figure>
-        </div>
+        </div> -->
     </section>
 
     <section id="citation">
