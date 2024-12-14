@@ -86,6 +86,26 @@ for Image and Video Generation" />
             margin-left: auto;
             margin-right: auto;
         }
+
+        .two_column {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+        .column {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .column h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -146,7 +166,7 @@ for Image and Video Generation" />
 
     <!-- 页面内容 -->
     <section id="overview">
-        <h2 style="font-size: 1.5em;">Overview</h2>
+        <h2 style="font-size: 2em;">Overview</h2>
         
         <p>
             We present VisionReward, a general strategy to aligning visual generation
@@ -195,19 +215,21 @@ for Image and Video Generation" />
     </section>
 
     <section id="intro">
-        <h2 style="font-size: 1.5em;">Introduction</h2>
+        <h2 style="font-size: 2em;">Introduction</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
             <!-- 卡片 1 -->
             <details style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
-                <summary style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ddd;">
+                <summary style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.5em; border-bottom: 1px solid #ddd;">
                     Annotation
                 </summary>
                 <div style="padding: 1rem;">
                     <h2 style="font-size: 1.5em;">Annotation</h2>
-                    <p>We design a unified annotation system for both image and video generation, decomposing the factors
+                    <p style="max-width: 80%;">We design a unified annotation system for both image and video generation, decomposing the factors
                         influencing human preferences. To address the challenges of video evaluation, we incorporate extensive
                         observations of dynamic content in videos into our judgment tasks, such as motion stability or movement
                         quality. The annotation contains 3 million questions for 48k images and 2 million questions for 33k videos.
+                    </p>
+                    <p style="max-width: 80%;">When evaluating an image or video, human preferences are often a result of the interplay of multiple factors, necessitating a balance among various considerations. To deconstruct human preferences systematically, we develop a fine-grained and multi-dimensional preference decomposition framework.
                     </p>
                     <table border="1" cellpadding="5" cellspacing="0"
                         style="width: 80%; margin: 20px auto; border-collapse: collapse; font-size: 16px;">
@@ -349,6 +371,23 @@ for Image and Video Generation" />
                         </tbody>
                     </table>
                     <p><em>Statistics of source data and annotation.</em></p>
+                    <p style="max-width: 80%;">In our annotation process, we design multiple-choice questions for each dimension, allowing annotators to select the option that best fits the image. Additionally, we further decompose these options into several binary (yes/no) questions, ultimately forming a checklist for evaluating each image or video. This checklist is then utilized for subsequent evaluation systems and reward model training.</p>
+                    <p style="text-align: left; margin-left: 20%; font-size: 1.2em;">Example: Color Aesthetic</p>
+                    <div class="two_column">
+                        <div class="column">
+                            <h2>Options</h2>
+                            <p>Beautiful colors <i class="far fa-smile" title="还不错"></i></li>
+                            <p>Ordinary colors <i class="far fa-meh" title="一般"></i></li>
+                            <p>Ugly colors<i class="far fa-frown" title="不怎么样"></i></li>
+                        </div>
+                    
+                        <!-- 右边栏目 -->
+                        <div class="column">
+                            <h2>Checklist</h2>
+                            <p>Are the colors beautiful?</p>
+                            <p>Are the colors not ugly?</p>
+                        </div>
+                    </div>
                 </div>
             </details>
             
