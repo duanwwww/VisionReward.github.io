@@ -103,7 +103,7 @@ for Image and Video Generation" />
             font-size: 1em;
         }
         .column h2 {
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             text-align: center;
         }
     </style>
@@ -371,20 +371,47 @@ for Image and Video Generation" />
                     </table>
                     <p><em>Statistics of source data and annotation.</em></p>
                     <p style="max-width: 80%;">In our annotation process, we design multiple-choice questions for each dimension, allowing annotators to select the option that best fits the image. Additionally, we further decompose these options into several binary (yes/no) questions, ultimately forming a checklist for evaluating each image or video. This checklist is then utilized for subsequent evaluation systems and reward model training.</p>
-                    <p style="text-align: left; margin-left: 20%; font-size: 1.2em;">Example: Color Aesthetic</p>
-                    <div class="two_column">
-                        <div class="column">
-                            <h2>Options</h2>
-                            <p>Beautiful colors <i class="far fa-smile" title="还不错"></i></li>
-                            <p>Ordinary colors <i class="far fa-meh" title="一般"></i></li>
-                            <p>Ugly colors <i class="far fa-frown" title="不怎么样"></i></li>
+                    <p style="font-size: 1.2em;">Examples</p>
+                    <div style="padding: 1rem;display: flex;flex-wrap: wrap; justify-content: center;">
+                        <div style="width: 50%;">
+                            <div style="width: 100%;">
+                                <p>Color Aesthetic (Image) </p>
+                            </div>
+                            <div class="two_column">
+                                <div class="column">
+                                    <h2>Options</h2>
+                                    <p>Beautiful Colors <i class="far fa-smile" title="good"></i></li>
+                                    <p>Ordinary Colors <i class="far fa-meh" title="normal"></i></li>
+                                    <p>Ugly Colors <i class="far fa-frown" title="bad"></i></li>
+                                </div>
+                            
+                                <!-- 右边栏目 -->
+                                <div class="column">
+                                    <h2>Checklist</h2>
+                                    <p>Are the colors beautiful?</p>
+                                    <p>Are the colors not ugly?</p>
+                                </div>
+                            </div>
                         </div>
-                    
-                        <!-- 右边栏目 -->
-                        <div class="column">
-                            <h2>Checklist</h2>
-                            <p>Are the colors beautiful?</p>
-                            <p>Are the colors not ugly?</p>
+                        <div style="width: 50%;">
+                            <div style="width: 100%;">
+                                <p>Movement Reality (Video) </p>
+                            </div>
+                            <div class="two_column">
+                                <div class="column">
+                                    <h2>Options</h2>
+                                    <p>Good <i class="far fa-smile" title="good"></i></li>
+                                    <p>Normal <i class="far fa-meh" title="normal"></i></li>
+                                    <p>Bad <i class="far fa-frown" title="bad"></i></li>
+                                </div>
+                            
+                                <!-- 右边栏目 -->
+                                <div class="column">
+                                    <h2>Checklist</h2>
+                                    <p>Is the object's movement completely realistic?</p>
+                                    <p>Does the object's movement have no obvious realism issues?</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
