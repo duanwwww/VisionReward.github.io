@@ -196,24 +196,44 @@ for Image and Video Generation" />
 
     <section id="intro">
         <h2 style="font-size: 1.5em;">Introduction</h2>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <div style="border: 1px solid #ddd; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                <h3>子标题 1</h3>
-                <p>这是子章节的内容。</p>
+        <section style="font-family: Arial, sans-serif;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">主标题</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                <!-- 卡片 1 -->
+                <details style="width: 300px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
+                    <summary style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ddd;">
+                        子标题 1
+                    </summary>
+                    <div style="padding: 1rem;">
+                        <p style="margin: 0 0 1rem;">这是子章节 1 的内容。这部分可以是详细的说明或者其他内容。</p>
+                        <a href="#" style="text-decoration: none; color: #007bff;">查看详情 →</a>
+                    </div>
+                </details>
+                
+                <!-- 卡片 2 -->
+                <details style="width: 300px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
+                    <summary style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ddd;">
+                        子标题 2
+                    </summary>
+                    <div style="padding: 1rem;">
+                        <p style="margin: 0 0 1rem;">这是子章节 2 的内容。这部分可以扩展为其他形式的内容展示。</p>
+                        <a href="#" style="text-decoration: none; color: #007bff;">查看详情 →</a>
+                    </div>
+                </details>
+        
+                <!-- 卡片 3 -->
+                <details style="width: 300px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
+                    <summary style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ddd;">
+                        子标题 3
+                    </summary>
+                    <div style="padding: 1rem;">
+                        <p style="margin: 0 0 1rem;">这是子章节 3 的内容。可以是文字、图片、链接或其他内容。</p>
+                        <a href="#" style="text-decoration: none; color: #007bff;">查看详情 →</a>
+                    </div>
+                </details>
             </div>
-            <div style="border: 1px solid #ddd; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                <h3>子标题 2</h3>
-                <p>这是另一个子章节的内容。</p>
-            </div>
-        </div>
-        <details>
-            <summary>子标题 1</summary>
-            <p>这是子章节的内容。</p>
-        </details>
-        <details>
-            <summary>子标题 2</summary>
-            <p>这是另一个子章节的内容。</p>
-        </details>
+        </section>
+        
         <h3 >annotation</h3>
         table&questions
         <h3>model</h3>
