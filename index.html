@@ -47,11 +47,28 @@ for Image and Video Generation" />
         }
 
         table {
-            border-collapse: collapse; /* 防止边框双重显示 */
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            font-size: 16px;
+            text-align: center;
         }
-
-        td, th{
-            border-right: none;
+        th, td {
+            padding: 10px;
+            vertical-align: middle; /* 垂直居中 */
+        }
+        th {
+            font-weight: bold;
+            background-color: #f9f9f9;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        table, th, td {
+            border: none; /* 移除分割线 */
         }
 
         /* 导航栏样式 */
@@ -230,8 +247,7 @@ for Image and Video Generation" />
                     </p>
                     <p style="max-width: 80%;">When evaluating an image or video, human preferences are often a result of the interplay of multiple factors, necessitating a balance among various considerations. To deconstruct human preferences systematically, we develop a fine-grained and multi-dimensional preference decomposition framework.
                     </p>
-                    <table border="1" cellpadding="5" cellspacing="0"
-                        style="width: 80%; margin: 20px auto; border-collapse: collapse; font-size: 16px;">
+                    <table>
                         <thead>
                             <tr>
                                 <th rowspan="2"><strong>Dimension</strong></th>
