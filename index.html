@@ -815,16 +815,176 @@ for Image and Video Generation" />
         <h2 style="font-size: 1.5em;">MPO Experiments</h2>
         <p><strong>We have conducted both automatic and human evaluations.MPO with VisionReward gets leading results across multiple machine metrics and are also most preferred by humans.</strong> </p>
         <div style="display: flex; justify-content: center; max-width: 100%;">
+            <div style="width: 50%;">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Methods</th>
+                        <th>CLIP</th>
+                        <th>Aes</th>
+                        <th>HPSv2</th>
+                        <th>PickScore</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Baseline</td>
+                        <td>0.273</td>
+                        <td>5.463</td>
+                        <td>0.282</td>
+                        <td>22.25</td>
+                      </tr>
+                      <tr>
+                        <td>DPO with Pick-a-Pic</td>
+                        <td><strong>0.279</strong></td>
+                        <td>5.511</td>
+                        <td>0.286</td>
+                        <td>22.45</td>
+                      </tr>
+                      <tr>
+                        <td>DPO with HPSv2</td>
+                        <td>0.277</td>
+                        <td>5.599</td>
+                        <td><strong>0.292</strong></td>
+                        <td>22.58</td>
+                      </tr>
+                      <tr>
+                        <td><strong>MPO (Ours)</strong></td>
+                        <td><strong>0.279</strong></td>
+                        <td><strong>5.612</strong></td>
+                        <td>0.289</td>
+                        <td><strong>22.61</strong></td>
+                      </tr>
+                    </tbody>
+                </table>
+                <p style="text-align: center;">Evaluation results of multiple metrics on DrawBench.</p>
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Methods</th>
+                        <th>Composition</th>
+                        <th>Quality</th>
+                        <th>Fidelity</th>
+                        <th>Safety&Emotion</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Baseline</td>
+                        <td>0.755</td>
+                        <td>0.550</td>
+                        <td>0.009</td>
+                        <td>-0.008</td>
+                      </tr>
+                      <tr>
+                        <td>DPO with Pick-a-Pic</td>
+                        <td>0.765</td>
+                        <td>0.588</td>
+                        <td>0.009</td>
+                        <td>-0.009</td>
+                      </tr>
+                      <tr>
+                        <td>DPO with HPSv2</td>
+                        <td>0.874</td>
+                        <td>0.630</td>
+                        <td>0.010</td>
+                        <td>-0.004</td>
+                      </tr>
+                      <tr>
+                        <td><strong>MPO (Ours)</strong></td>
+                        <td><strong>0.894</strong></td>
+                        <td><strong>0.670</strong></td>
+                        <td><strong>0.017</strong></td>
+                        <td><strong>-0.001</strong></td>
+                      </tr>
+                    </tbody>
+                    </table>
+                    <p style="text-align: center;">Evaluation results analyzed by VisionReward.</p>
+            </div>
+            <div style="width: 50%;">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Methods</th>
+                        <th style="text-align: center;">Human<br>Action</th>
+                        <th>Scene</th>
+                        <th style="text-align: center;">Multiple<br>Objects</th>
+                        <th style="text-align: center;">Appear.<br>Style</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Baseline</td>
+                        <td>98.20</td>
+                        <td>55.60</td>
+                        <td>68.43</td>
+                        <td><strong>24.20</strong></td>
+                      </tr>
+                      <tr>
+                        <td>VideoScore</td>
+                        <td>97.60</td>
+                        <td>56.25</td>
+                        <td>68.66</td>
+                        <td>23.96</td>
+                      </tr>
+                      <tr>
+                        <td>VisionReward</td>
+                        <td><strong>98.40</strong></td>
+                        <td><strong>57.57</strong></td>
+                        <td><strong>71.54</strong></td>
+                        <td>24.02</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p style="text-align: center;">Evaluation results on VBench.</p>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Methods</th>
+                        <th>Stability</th>
+                        <th>Dynamic</th>
+                        <th>Physics</th>
+                        <th>Preservation</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Baseline</td>
+                        <td>0.272</td>
+                        <td><strong>0.047</strong></td>
+                        <td>0.323</td>
+                        <td>0.584</td>
+                      </tr>
+                      <tr>
+                        <td>VideoScore</td>
+                        <td>0.242</td>
+                        <td>0.046</td>
+                        <td>0.319</td>
+                        <td>0.557</td>
+                      </tr>
+                      <tr>
+                        <td>VisionReward</td>
+                        <td><strong>0.309</strong></td>
+                        <td>0.036</td>
+                        <td><strong>0.337</strong></td>
+                        <td><strong>0.661</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p style="text-align: center;">Evaluation results on MonetBench.</p>
+            </div>            
+        </div>
+        <div style="display: flex; justify-content: center; max-width: 100%;">
             <figure style="max-width: 48%; height: auto;">
                 <image src="https://duanwwww.github.io/VisionReward.github.io/images/pairwise2.jpg"
-                    style="width: 90%; height: 150px;">
+                    style="width: 90%; height: 120px;">
                 </image>
                 <figcaption>Human evaluation of Image MPO.
                 </figcaption> 
             </figure>
             <figure style="max-width: 48%; height: auto;">
                 <image src="https://duanwwww.github.io/VisionReward.github.io/images/pairwise.jpg"
-                    style="width: 90%; height: 150px;">
+                    style="width: 90%; height: 120px;">
                 </image>
                 <figcaption>Human evaluation of Video MPO.
                 </figcaption>
