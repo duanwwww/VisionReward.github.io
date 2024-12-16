@@ -124,28 +124,6 @@ for Image and Video Generation" />
             margin-left: auto;
             margin-right: auto;
         }
-
-        .two_column {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-        }
-
-        .column {
-            width: 30%;
-            padding: 20px;
-            box-sizing: border-box;
-            border: 1px solid #ddd;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 1em;
-        }
-
-        .column h2 {
-            margin-bottom: 5px;
-            text-align: center;
-        }
     </style>
 </head>
 
@@ -485,12 +463,25 @@ for Image and Video Generation" />
             <details
                 style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
                 <summary
-                    style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ddd;">
-                    子标题 2
+                    style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.5rem; border-bottom: 1px solid #ddd;">
+                    VisionReward Training
                 </summary>
                 <div style="padding: 1rem;">
-                    <p style="margin: 0 0 1rem;">这是子章节 2 的内容。这部分可以扩展为其他形式的内容展示。</p>
-                    <a href="#" style="text-decoration: none; color: #007bff;">查看详情 →</a>
+                    <p>VisionReward consists of two components: Checklist & Linear Weighted Summarize</p>
+                    <div style="display: flex; flex-direction: row; justify-content: center;">
+                        <div style="width: 48%;">
+                            </br>
+                            <p style="font-size: 1.2em; width: 100%;">Checklist</p>
+                            </br>
+                            <p>🔷 VisionReward is a vision-language generative model to answer a set of judgment questions regarding an image or video with "yes" or "no". We use CogVLM2 as the base model for image understanding, and CogVLM2-Video as the base model for video understanding. We use balanced instruction tuning dataset consisting of judgement questions to fine-tune base VLM.</p>
+                        </div>
+                        <div style="width: 48%;">
+                            </br>
+                            <p style="font-size: 1.2em; width: 100%;">Linear Weighted Summarize</p>
+                            </br>
+                            <p>🔷 VisionReward applies a linear weighting to the list of "yes" or "no" responses to obtain the final score. We collect a dataset of human preferences, compute the feature difference for each pair, and then perform regression using the logistic regression model to find the optimal weights that best represent human preferences. </p>
+                        </div>
+                    </div>
                 </div>
             </details>
 
@@ -498,8 +489,8 @@ for Image and Video Generation" />
             <details
                 style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
                 <summary
-                    style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ddd;">
-                    子标题 3
+                    style="cursor: pointer; padding: 1rem; background-color: #f9f9f9; font-weight: bold; font-size: 1.5rem; border-bottom: 1px solid #ddd;">
+                    MPO
                 </summary>
                 <div style="padding: 1rem;">
                     <p style="margin: 0 0 1rem;">这是子章节 3 的内容。可以是文字、图片、链接或其他内容。</p>
