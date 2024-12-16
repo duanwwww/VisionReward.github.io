@@ -467,19 +467,19 @@ for Image and Video Generation" />
                     VisionReward Training
                 </summary>
                 <div style="padding: 1rem;">
-                    <p>VisionReward consists of two components: Checklist & Linear Weighted Summarize</p>
+                    <p style="font-size: 1.3em;">VisionReward consists of two components: Checklist & Linear Weighted Summarize</p>
                     <div style="display: flex; flex-direction: row; justify-content: center;">
                         <div style="width: 48%;">
                             </br>
                             <p style="font-size: 1.2em; width: 100%;">Checklist</p>
                             </br>
-                            <p>🔷 VisionReward is a vision-language generative model to answer a set of judgment questions regarding an image or video with "yes" or "no". We use CogVLM2 as the base model for image understanding, and CogVLM2-Video as the base model for video understanding. We use balanced instruction tuning dataset consisting of judgement questions to fine-tune base VLM.</p>
+                            <p style="max-width: 90%;">🔷 VisionReward is a vision-language generative model to answer a set of judgment questions regarding an image or video with "yes" or "no". We use CogVLM2 as the base model for image understanding, and CogVLM2-Video as the base model for video understanding. We use balanced instruction tuning dataset consisting of judgement questions to fine-tune base VLM.</p>
                         </div>
                         <div style="width: 48%;">
                             </br>
                             <p style="font-size: 1.2em; width: 100%;">Linear Weighted Summarize</p>
                             </br>
-                            <p>🔷 VisionReward applies a linear weighting to the list of "yes" or "no" responses to obtain the final score. We collect a dataset of human preferences, compute the feature difference for each pair, and then perform regression using the logistic regression model to find the optimal weights that best represent human preferences. </p>
+                            <p style="max-width: 90%;">🔷 VisionReward applies a linear weighting to the list of "yes" or "no" responses to obtain the final score. We collect a dataset of human preferences, compute the feature difference for each pair, and then perform regression using the logistic regression model to find the optimal weights that best represent human preferences. </p>
                         </div>
                     </div>
                 </div>
@@ -493,19 +493,58 @@ for Image and Video Generation" />
                     MPO
                 </summary>
                 <div style="padding: 1rem;">
-                    <p style="margin: 0 0 1rem;">这是子章节 3 的内容。可以是文字、图片、链接或其他内容。</p>
-                    <a href="#" style="text-decoration: none; color: #007bff;">查看详情 →</a>
+                    <p>🔷 Although Diffusion-DPO has designed a direct preference optimization method to fine-tune text-to-image diffusion models, it suffers from being biased and over-optimized on certain dimensions such as aesthetic but gets somewhat worse, for example, less safe and more trouble about human body. We reproduce the procedure of Diffusion-DPO and test the fine-tuned model on 10,000 sampled prompts from training data, using VisionReward to score images. The following figures illustrates the changes across various dimensions after applying preference learning using the human preference dataset in which factors are coupled with different trade-offs.</p>
+                    <div style="display: flex; justify-content: center; max-width: 100%;">
+                        <figure style="max-width: 48%; height: auto;">
+                            <image src="https://duanwwww.github.io/VisionReward.github.io/images/compare-pick.jpg"
+                                style="width: 90%; height: auto;">
+                            </image>
+                            <figcaption>Data analysis.
+                            </figcaption> 
+                        </figure>
+                        <figure style="max-width: 48%; height: auto;">
+                            <image src="https://duanwwww.github.io/VisionReward.github.io/videos/compare-pick-dpo.jpg"
+                                style="width: 90%; height: auto;">
+                            </image>
+                            <figcaption>DPO analysis.
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <p>We thus propose an algorithm to ensure that all dimensions are reasonably enhanced.</p>
+                    <figure style="max-width: 100%; height: auto;">
+                        <image src="https://duanwwww.github.io/VisionReward.github.io/images/MPO.png"
+                            style="width: 90%; height: auto;">
+                        </image>
+                        <figcaption>MPO algorithm.
+                        </figcaption> 
+                    </figure>
+                    <div style="display: flex; justify-content: center; max-width: 100%;">
+                        <figure style="max-width: 48%; height: auto;">
+                            <image src="https://duanwwww.github.io/VisionReward.github.io/images/compare-ours.jpg"
+                                style="width: 90%; height: auto;">
+                            </image>
+                            <figcaption>Ours data analysis.
+                            </figcaption> 
+                        </figure>
+                        <figure style="max-width: 48%; height: auto;">
+                            <image src="https://duanwwww.github.io/VisionReward.github.io/videos/compare-ours-dpo.jpg"
+                                style="width: 90%; height: auto;">
+                            </image>
+                            <figcaption>MPO analysis.
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>
             </details>
         </div>
-
+<!-- 
         <h3>annotation</h3>
         table&questions
         <h3>model</h3>
         scoring examples
         <h3>examples</h3>
         <h3>mpo</h3>
-        figure&explanations
+        figure&explanations -->
     </section>
 
     <!-- <section id="benchmark">
